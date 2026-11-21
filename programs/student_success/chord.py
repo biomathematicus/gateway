@@ -173,6 +173,42 @@ def _draw(matrix: pd.DataFrame, label_size: float, ticks_interval: int | None,
     return circos.plotfig(figsize=(figsize, figsize))
 
 
+def college_legend(fig, matrix: pd.DataFrame, n_merged: int,
+                   size: float, ncol: int = 3) -> None:
+    """Legend of the colleges below the ring: one swatch per college that
+    has a sector in the figure, in the fixed order of
+    config.COLLEGE_COLORS, and the gray of the aggregate sector last.
+
+    The legend is anchored under everything already drawn (the sector
+    names reach below the ring), centered on the drawing, and laid out in
+    `ncol` columns, so it takes several lines. Swatches are opaque, which
+    keeps them apart from the ribbons (alpha 0.55) for
+    tools/chord_geometry_check.py."""
+    from matplotlib.patches import Patch
+    colleges = data.major_college()
+    present = {colleges.get(m) for m in matrix.index if m != "Other"}
+    entries = [(c, col) for c, col in config.COLLEGE_COLORS.items()
+               if c in present]
+    if "Other" in matrix.index:
+        entries.append((f"Other ({n_merged} smallest majors)" if n_merged
+                        else "Other", config.COLLEGE_OTHER_COLOR))
+    fig.canvas.draw()
+    box = fig.get_tightbbox(fig.canvas.get_renderer())      # inches
+    width, height = fig.get_size_inches()
+    legend = fig.legend(
+        handles=[Patch(facecolor=col, edgecolor="none") for _, col in entries],
+        labels=[name for name, _ in entries],
+        title="College", loc="upper center",
+        bbox_to_anchor=((box.x0 + box.x1) / 2 / width,
+                        box.y0 / height - 0.012),
+        ncol=ncol, frameon=False, fontsize=size, title_fontsize=size,
+        handlelength=1.1, handleheight=1.1, handletextpad=0.5,
+        columnspacing=2.2, labelspacing=0.45, borderaxespad=0.0)
+    legend.get_title().set_fontweight("bold")
+    for text in legend.get_texts() + [legend.get_title()]:
+        text.set_color(config.INK)
+
+
 def top_n(matrix: pd.DataFrame, n: int) -> pd.DataFrame:
     """Keep the n largest majors by total flow; aggregate the rest as Other."""
     total = (matrix.sum(axis=1) + matrix.sum(axis=0)).sort_values(ascending=False)
@@ -234,6 +270,9 @@ def chord_majors(df: pd.DataFrame, subject: str) -> str:
         stats["n_students"]
     fig = _draw(m, label_size=config.CHORD_BODY_LABEL_SIZE,
                 ticks_interval=None, figsize=24, plain_q2=True, rotate=True)
+    # a little larger than the sector names: the legend is read first
+    college_legend(fig, m, len(merged),
+                   size=1.2 * config.CHORD_BODY_LABEL_SIZE)
     # the quantities the text quotes from this figure
     (config.IMG_DIR / f"figChord-{subject}-majors_stats.json").write_text(
         json.dumps(stats, indent=1), encoding="utf-8")
@@ -262,7 +301,8 @@ def chord_majors(df: pd.DataFrame, subject: str) -> str:
         "position. Arc length is proportional to the students of the "
         "drawn flows, donated plus received; ribbons point from donor to "
         "acceptor and inherit the "
-        f"donor's color; colors denote college. The {len(merged)} majors "
+        "donor's color; colors denote college (legend below the ring). "
+        f"The {len(merged)} majors "
         "with the smallest total flow are collected in the gray sector "
         "labeled Other. Sectors run clockwise from the largest.",
         png_dpi=config.CHORD_BODY_PNG_DPI, svg=True)
