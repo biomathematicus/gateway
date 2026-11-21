@@ -11,9 +11,18 @@ Runs each `m_<name>.py` module of this folder and writes, under
 
 and two index files the manuscript inputs:
 
-    newcommands.tex           inputs every <name>_newcommands.tex (preamble)
+    newcommands.tex           defines `\\WarningRunPipeline`, the initial
+                              value of every macro: the words RUN THE
+                              PIPELINE in bold red (the document loads
+                              xcolor); then inputs every
+                              <name>_newcommands.tex (preamble)
     renewcommands.tex         inputs every <name>_renewcommands.tex (after
                               \\begin{document})
+
+A macro whose value is missing therefore prints the red warning wherever
+the text uses it. The index files also hold two macros about the macros
+themselves: `\\MacroTotal`, the number of quantities the modules name,
+and `\\MacroModulesWord`, the number of modules.
 
 A file is rewritten only when its macros changed, so the "Generated" line
 of a file is the time its values last changed.
@@ -28,6 +37,12 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import texmacros as T  # noqa: E402
+
+
+#: What a quantity prints until its value is assigned. \providecommand
+#: lets a document set its own warning before the index file is read.
+WARNING = ("\\providecommand{\\WarningRunPipeline}"
+           "{\\textcolor{red}{\\textbf{[RUN THE PIPELINE]}}}")
 
 
 def modules():
@@ -74,12 +89,29 @@ def main():
             + "".join(f"\\renewcommand{{\\{k}}}{{{v}}}\n"
                       for k, v in items.items()))
         done.append((name, len(items)))
+    # macros about the macros: how many quantities, in how many modules
+    meta = {"MacroTotal": T.fmt(len(seen), "int"),
+            "MacroModulesWord": T.fmt(len(done), "word")}
+    head = {
+        "newcommands":
+            "% Initial value of every quantity: a warning in bold red. A\n"
+            "% quantity keeps it until a renewcommands file assigns its\n"
+            "% value, so a missing run of the pipeline shows in the PDF.\n"
+            "% The document loads xcolor.\n"
+            + WARNING + "\n"
+            + "".join(f"\\newcommand{{\\{k}}}{{\\WarningRunPipeline}}\n"
+                      for k in meta),
+        "renewcommands":
+            "".join(f"\\renewcommand{{\\{k}}}{{{v}}}\n"
+                    for k, v in meta.items()),
+    }
     for kind in ("newcommands", "renewcommands"):
         changed += write(
             T.OUT / f"{kind}.tex",
             f"% Index of the {kind} files, written by\n"
             "% programs/macros/make_macros.py. \\MacroDir is set in main.tex.\n"
             f"% Generated: {stamp}\n"
+            + head[kind]
             + "".join(f"\\input{{\\MacroDir {n}_{kind}}}\n" for n, _ in done))
     for n, k in done:
         print(f"  {n:18s} {k:4d} macros")

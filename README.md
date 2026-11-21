@@ -1,7 +1,8 @@
 # Gateway
 
-Source code of the study *Child Poverty, Course Provision, and Preparation
-for the Mathematics Gateway at a Broad-Access Hispanic-Serving University*.
+Source code of the study *A Calculus Gradient: Child Poverty, Mathematics
+Preparation, and First-Year College Performance at a Hispanic-Serving
+University*.
 
 The study relates the child poverty of school districts to the courses
 their high schools enroll students in, links the entrants of one public
@@ -48,13 +49,18 @@ No number that a program computes is typed in the manuscript.
    threshold, the number of bootstrap draws) is read from the constant of
    the program that uses it.
 3. `programs/macros/make_macros.py` writes two files per module under
-   `programs/figures/macros/`: `<analysis>_newcommands.tex` declares each
-   macro with the placeholder `[RUN PIPELINE]`, and
-   `<analysis>_renewcommands.tex` sets its value.
+   `programs/figures/macros/`. `<analysis>_newcommands.tex` declares each
+   macro with `\newcommand` and gives every one the same initial value,
+   `\WarningRunPipeline`: the words **[RUN THE PIPELINE]** in bold red.
+   `<analysis>_renewcommands.tex` assigns each value with `\renewcommand`.
+   The index file `newcommands.tex` defines the warning (the document
+   loads `xcolor`), and the two index files input the files of every
+   module.
 4. The manuscript loads the declarations in its preamble and the values
    after `\begin{document}`, and its text says `\CalcMeanPerHundred{}`
    where a reader sees a number. A quantity that no program supplied
-   prints as `[RUN PIPELINE]`.
+   prints as the red warning wherever the text uses it, so a missing run
+   of the pipeline is conspicuous in the PDF.
 
 ```
 python run_all.py --stage macros

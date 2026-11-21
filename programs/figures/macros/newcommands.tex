@@ -1,6 +1,13 @@
 % Index of the newcommands files, written by
 % programs/macros/make_macros.py. \MacroDir is set in main.tex.
-% Generated: 2026-11-20 21:33:45
+% Generated: 2026-11-21 13:03:52
+% Initial value of every quantity: a warning in bold red. A
+% quantity keeps it until a renewcommands file assigns its
+% value, so a missing run of the pipeline shows in the PDF.
+% The document loads xcolor.
+\providecommand{\WarningRunPipeline}{\textcolor{red}{\textbf{[RUN THE PIPELINE]}}}
+\newcommand{\MacroTotal}{\WarningRunPipeline}
+\newcommand{\MacroModulesWord}{\WarningRunPipeline}
 \input{\MacroDir calc_newcommands}
 \input{\MacroDir data_newcommands}
 \input{\MacroDir grad_newcommands}
