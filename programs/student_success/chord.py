@@ -356,14 +356,15 @@ def _tex_escape(s: str) -> str:
 
 def _two_panel_table(rows: list[tuple[str, ...]], headers: tuple[str, ...],
                      colspec: str, label: str, caption: str,
-                     size: str = "\\small") -> str:
+                     size: str = "\\small", placement: str = "tbp") -> str:
     """Render rows as two side-by-side panels so a ~50-row table fits on
-    one page without extra packages."""
+    one page without extra packages. `placement` is the float placement
+    of the table."""
     half = (len(rows) + 1) // 2
     left, right = rows[:half], rows[half:]
     right += [("",) * len(headers)] * (len(left) - len(right))
     head = " & ".join(f"\\textbf{{{h}}}" for h in headers)
-    out = ["\\begin{table}[tbp]", "  \\centering", f"  {size}",
+    out = [f"\\begin{{table}}[{placement}]", "  \\centering", f"  {size}",
            "  \\setlength{\\tabcolsep}{4pt}",
            f"  \\caption{{{caption}}}", f"  \\label{{{label}}}",
            f"  \\begin{{tabular}}{{{colspec}@{{\\quad}}{colspec}}}",
@@ -428,7 +429,11 @@ def major_tables(df: pd.DataFrame) -> list[str]:
         # the General majors inside Other are expanded too: the list of
         # merged majors names them
         + _general_note(order + merged) + "." + other_note,
-        size="\\footnotesize"),
+        size="\\footnotesize",
+        # the index stays with the text of its appendix (set by the PI in
+        # the generated file on 2026-11-21, kept here so that a new run
+        # writes the same)
+        placement="hbp"),
         encoding="utf-8")
     return [str(p)]
 
