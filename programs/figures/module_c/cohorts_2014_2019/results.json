@@ -1,0 +1,37 @@
+{
+ "mode": "deviation: cohort-restricted estimation",
+ "seed": 20261118,
+ "first_cohort": 2014,
+ "last_cohort": 2019,
+ "H1": {
+  "estimate": 0.026869139883842402,
+  "se": 0.009765507174451488,
+  "lo": 0.007728745821917488,
+  "hi": 0.04600953394576732,
+  "p": 0.005933513420422216,
+  "students": 23478,
+  "schools": 882,
+  "math_score_sd_points": 71.34861347441566,
+  "estimate_score_points": 1.9170758759622772,
+  "supported": true
+ },
+ "index_on_math_score": {
+  "estimate": 0.1364189781827475,
+  "se": 0.018157429158324804,
+  "estimate_score_points": 9.733304944935595
+ },
+ "secondary_n": {
+  "entry_math_level": 17148,
+  "ap_math_credit": 23478,
+  "dual_math_credit": 23478
+ },
+ "H2": {
+  "pooled": 0.1400930478070562,
+  "lo": 0.1114938896921449,
+  "hi": 0.1686922059219675,
+  "subjects": 18,
+  "subjects_passing_fdr_positive": 17,
+  "supported": true
+ },
+ "seconds": 1672
+}

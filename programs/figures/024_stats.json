@@ -1,0 +1,284 @@
+{
+ "n_rows": 52289,
+ "min_pop_5_17": 200,
+ "n_dropped_by_min_pop": 3230,
+ "pop_ladder": [
+  {
+   "cycle": "2017-18",
+   "min_pop_5_17": 0,
+   "n": 10425,
+   "slope_unweighted": 0.0302,
+   "se_unweighted": 0.0333,
+   "slope_weighted": -0.0521,
+   "se_weighted": 0.0029,
+   "max_alg2_per_child": 31.33
+  },
+  {
+   "cycle": "2017-18",
+   "min_pop_5_17": 50,
+   "n": 10370,
+   "slope_unweighted": -0.0374,
+   "se_unweighted": 0.0063,
+   "slope_weighted": -0.0522,
+   "se_weighted": 0.0028,
+   "max_alg2_per_child": 4.45
+  },
+  {
+   "cycle": "2017-18",
+   "min_pop_5_17": 100,
+   "n": 10228,
+   "slope_unweighted": -0.043,
+   "se_unweighted": 0.0062,
+   "slope_weighted": -0.0523,
+   "se_weighted": 0.0028,
+   "max_alg2_per_child": 4.45
+  },
+  {
+   "cycle": "2017-18",
+   "min_pop_5_17": 200,
+   "n": 9795,
+   "slope_unweighted": -0.0494,
+   "se_unweighted": 0.0037,
+   "slope_weighted": -0.0524,
+   "se_weighted": 0.0027,
+   "max_alg2_per_child": 0.68
+  },
+  {
+   "cycle": "2017-18",
+   "min_pop_5_17": 500,
+   "n": 8334,
+   "slope_unweighted": -0.0514,
+   "se_unweighted": 0.0039,
+   "slope_weighted": -0.0525,
+   "se_weighted": 0.003,
+   "max_alg2_per_child": 0.68
+  },
+  {
+   "cycle": "2017-18",
+   "min_pop_5_17": 1000,
+   "n": 6503,
+   "slope_unweighted": -0.0545,
+   "se_unweighted": 0.0042,
+   "slope_weighted": -0.0527,
+   "se_weighted": 0.0033,
+   "max_alg2_per_child": 0.68
+  },
+  {
+   "cycle": "2021-22",
+   "min_pop_5_17": 0,
+   "n": 10379,
+   "slope_unweighted": -0.0219,
+   "se_unweighted": 0.0081,
+   "slope_weighted": -0.0513,
+   "se_weighted": 0.0031,
+   "max_alg2_per_child": 4.08
+  },
+  {
+   "cycle": "2021-22",
+   "min_pop_5_17": 50,
+   "n": 10324,
+   "slope_unweighted": -0.0303,
+   "se_unweighted": 0.0065,
+   "slope_weighted": -0.0513,
+   "se_weighted": 0.0031,
+   "max_alg2_per_child": 4.08
+  },
+  {
+   "cycle": "2021-22",
+   "min_pop_5_17": 100,
+   "n": 10181,
+   "slope_unweighted": -0.0347,
+   "se_unweighted": 0.0063,
+   "slope_weighted": -0.0514,
+   "se_weighted": 0.0031,
+   "max_alg2_per_child": 4.08
+  },
+  {
+   "cycle": "2021-22",
+   "min_pop_5_17": 200,
+   "n": 9735,
+   "slope_unweighted": -0.0437,
+   "se_unweighted": 0.0042,
+   "slope_weighted": -0.0516,
+   "se_weighted": 0.0031,
+   "max_alg2_per_child": 0.89
+  },
+  {
+   "cycle": "2021-22",
+   "min_pop_5_17": 500,
+   "n": 8289,
+   "slope_unweighted": -0.0497,
+   "se_unweighted": 0.0042,
+   "slope_weighted": -0.0519,
+   "se_weighted": 0.0033,
+   "max_alg2_per_child": 0.63
+  },
+  {
+   "cycle": "2021-22",
+   "min_pop_5_17": 1000,
+   "n": 6474,
+   "slope_unweighted": -0.052,
+   "se_unweighted": 0.0045,
+   "slope_weighted": -0.0521,
+   "se_weighted": 0.0037,
+   "max_alg2_per_child": 0.63
+  }
+ ],
+ "cross_section": [
+  {
+   "cycle": "2017-18",
+   "scope": "national",
+   "weighting": "population-weighted",
+   "slope": -0.0524,
+   "se_naive": 0.0027,
+   "se_clustered": 0.0136,
+   "se_ratio": 4.96,
+   "n": 9795,
+   "n_states": 52.0
+  },
+  {
+   "cycle": "2017-18",
+   "scope": "national",
+   "weighting": "unweighted",
+   "slope": -0.0494,
+   "se_naive": 0.0037,
+   "se_clustered": 0.0149,
+   "se_ratio": 4.01,
+   "n": 9795,
+   "n_states": 52.0
+  },
+  {
+   "cycle": "2017-18",
+   "scope": "Texas",
+   "weighting": "population-weighted",
+   "slope": -0.0252,
+   "se_naive": 0.0063,
+   "se_clustered": NaN,
+   "se_ratio": NaN,
+   "n": 860,
+   "n_states": NaN
+  },
+  {
+   "cycle": "2017-18",
+   "scope": "Texas",
+   "weighting": "unweighted",
+   "slope": -0.0399,
+   "se_naive": 0.0098,
+   "se_clustered": NaN,
+   "se_ratio": NaN,
+   "n": 860,
+   "n_states": NaN
+  },
+  {
+   "cycle": "2021-22",
+   "scope": "national",
+   "weighting": "population-weighted",
+   "slope": -0.0516,
+   "se_naive": 0.0031,
+   "se_clustered": 0.013,
+   "se_ratio": 4.15,
+   "n": 9735,
+   "n_states": 51.0
+  },
+  {
+   "cycle": "2021-22",
+   "scope": "national",
+   "weighting": "unweighted",
+   "slope": -0.0437,
+   "se_naive": 0.0042,
+   "se_clustered": 0.0161,
+   "se_ratio": 3.84,
+   "n": 9735,
+   "n_states": 51.0
+  },
+  {
+   "cycle": "2021-22",
+   "scope": "Texas",
+   "weighting": "population-weighted",
+   "slope": -0.0172,
+   "se_naive": 0.009,
+   "se_clustered": NaN,
+   "se_ratio": NaN,
+   "n": 846,
+   "n_states": NaN
+  },
+  {
+   "cycle": "2021-22",
+   "scope": "Texas",
+   "weighting": "unweighted",
+   "slope": -0.0234,
+   "se_naive": 0.0135,
+   "se_clustered": NaN,
+   "se_ratio": NaN,
+   "n": 846,
+   "n_states": NaN
+  }
+ ],
+ "fixed_effects": [
+  {
+   "scope": "national",
+   "weighting": "population-weighted",
+   "slope": 0.0151,
+   "se": 0.0099,
+   "z": 1.53,
+   "n": 38866,
+   "n_districts": 10029,
+   "cycles": [
+    "2013-14",
+    "2015-16",
+    "2017-18",
+    "2021-22"
+   ]
+  },
+  {
+   "scope": "national",
+   "weighting": "unweighted",
+   "slope": -0.0022,
+   "se": 0.0047,
+   "z": -0.48,
+   "n": 38866,
+   "n_districts": 10029,
+   "cycles": [
+    "2013-14",
+    "2015-16",
+    "2017-18",
+    "2021-22"
+   ]
+  },
+  {
+   "scope": "Texas",
+   "weighting": "population-weighted",
+   "slope": 0.0211,
+   "se": 0.0236,
+   "z": 0.89,
+   "n": 3401,
+   "n_districts": 865,
+   "cycles": [
+    "2013-14",
+    "2015-16",
+    "2017-18",
+    "2021-22"
+   ]
+  },
+  {
+   "scope": "Texas",
+   "weighting": "unweighted",
+   "slope": -0.0121,
+   "se": 0.0121,
+   "z": -1.0,
+   "n": 3401,
+   "n_districts": 865,
+   "cycles": [
+    "2013-14",
+    "2015-16",
+    "2017-18",
+    "2021-22"
+   ]
+  }
+ ],
+ "stability_z_population-weighted": 0.04,
+ "stability_z_unweighted": 0.26,
+ "figures": [
+  "../figures/024_algebra2_robustness.png"
+ ]
+}

@@ -1,0 +1,454 @@
+"""Module C figures and tables, drawn from the released aggregates only.
+
+    python mc_figures.py registered      (or: dryrun)
+    python mc_figures.py cohorts_2014_2019 rev5
+                        estimates of the first folder with the corrected
+                        intervals of rev5_module_c.py; written to rev5/
+
+figPreparationVariance  how each block changes the district, school, and
+                        student variance components of the two outcomes
+figSubjectPredictors    subject-by-predictor table of grade coefficients
+tabSubjectPooled        pooled score coefficients by subject class
+
+Each figure comes with a TeX snippet whose caption takes its numbers from
+the tables, so no number is typed by hand.
+"""
+import csv
+import json
+import sys
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.colors import LinearSegmentedColormap, Normalize
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE.parent / "figures" / "module_c"
+BLUE, RED, NEUTRAL = "#2a78d6", "#e34948", "#f0efec"
+ORANGE, GREEN = "#eb6834", "#1baf7a"
+INK, INK_MUTED, GRID = "#0b0b0b", "#898781", "#e1e0d9"
+CMAP = LinearSegmentedColormap.from_list("coef", [RED, NEUTRAL, BLUE])
+plt.rcParams.update({"pdf.fonttype": 42, "font.family": "sans-serif",
+                     "text.color": INK})
+NL = "\n"
+DEST = None            # output folder when it differs from the source
+GAP = 0.45             # space between student and context columns
+SUBJECT_NAME = {
+    "MAT": "mathematics", "CHE": "chemistry", "ECO": "economics",
+    "STA": "statistics", "PHY": "physics", "CS": "computer science",
+    "ACC": "accounting", "AIS": "the first-year seminar",
+    "WRC": "writing composition", "POL": "political science",
+    "HIS": "history", "BIO": "biology", "PSY": "psychology",
+    "SOC": "sociology", "IS": "information systems", "ANT": "anthropology",
+    "GEO": "geology", "MUS": "music", "ES": "environmental science",
+    "SPN": "Spanish", "AHC": "art history and criticism",
+    "KIN": "kinesiology", "ART": "art", "COM": "communication",
+    "GRG": "geography", "COR": "core curriculum", "ENG": "English",
+    "CRJ": "criminal justice", "AST": "astronomy", "CLA": "classics",
+    "ME": "mechanical engineering"}
+
+
+def dest(out):
+    return DEST or out
+
+
+def read(path):
+    with open(path, encoding="utf-8") as fh:
+        return list(csv.DictReader(fh))
+
+
+def cohort_range(out):
+    """first and last entry cohort of the run, from the sample flow"""
+    c = [int(r["cohort"]) for r in read(out / "stage0_cohort_flow.csv")]
+    return min(c), max(c)
+
+
+def save(fig, out, name):
+    fig.savefig(out / f"{name}.pdf")
+    fig.savefig(out / f"{name}.png", dpi=300)
+    plt.close(fig)
+
+
+def variance(out):
+    rows = read(out / "q1_variance_partition.csv")
+    steps = ["design", "+F", "+D", "+P", "+S"]
+    labels = ["cohort," + NL + "CAP", "+ family", "+ demo-" + NL + "graphics",
+              "+ district" + NL + "poverty", "+ school"]
+    series = [("var_district", "between districts", BLUE, "o"),
+              ("var_school", "between schools, within district", ORANGE, "s"),
+              ("var_student", "among entrants from the same school", GREEN,
+               "^")]
+    fig, axes = plt.subplots(1, 2, figsize=(14.5, 6.6), sharey=True)
+    for ax, (oc, title) in zip(axes, (("math", "Mathematics score"),
+                                      ("gap", "Mathematics minus verbal"))):
+        r = {x["step"]: x for x in rows if x["outcome"] == oc}
+        tot = sum(float(r["design"][k]) for k, *_ in series)
+        for key, lab, col, mk in series:
+            base = float(r["design"][key])
+            y = [100 * float(r[s][key]) / base for s in steps]
+            ax.plot(range(5), y, color=col, lw=2.4, marker=mk, ms=10,
+                    mec="white", mew=1.0,
+                    label=f"{lab} ({100 * base / tot:.1f}% of total)")
+        ax.set_title(title, fontsize=19, loc="left", pad=10)
+        ax.set_xticks(range(5))
+        ax.set_xticklabels(labels, fontsize=15.5)
+        ax.set_ylim(0, 110)
+        ax.tick_params(labelsize=15.5, color=INK_MUTED)
+        ax.grid(axis="y", color=GRID, linewidth=0.6)
+        ax.set_axisbelow(True)
+        for side in ("top", "right"):
+            ax.spines[side].set_visible(False)
+        for side in ("left", "bottom"):
+            ax.spines[side].set_color(INK_MUTED)
+        ax.legend(fontsize=14.5, frameon=False, loc="upper center",
+                  bbox_to_anchor=(0.5, -0.20))
+    axes[0].set_ylabel("variance remaining (% of the first step)",
+                       fontsize=17)
+    fig.set_size_inches(14.5, 8.2)
+    fig.tight_layout()
+    save(fig, dest(out), "figPreparationVariance")
+    r = rows[0]
+    c0, c1 = cohort_range(out)
+    tex = [
+        "% Canonical caption for figPreparationVariance.pdf",
+        "% Generated by: code/module_c/mc_figures.py from",
+        f"% code/figures/module_c/{out.name}/q1_variance_partition.csv",
+        r"\begin{figure}[tbp]",
+        r"  \centering",
+        r"  \includegraphics[width=\textwidth]{figPreparationVariance.pdf}",
+        r"  \caption{Where the variation in entry preparation lies, and",
+        "    how each variance component changes as predictor blocks enter,",
+        f"    among the {int(r['students']):,} linked first-time fall",
+        f"    entrants of Fall {c0} to Fall {c1} ({int(r['schools']):,}",
+        f"    sending schools in {int(r['districts']):,} districts). Each",
+        "    line follows one variance component of a nested",
+        "    random-intercept model as blocks enter in order: family",
+        "    resources (aid application, AGI rank, first-generation",
+        "    status), demographics, district child poverty, and the school",
+        "    block (advanced-mathematics index, AP science and",
+        "    dual-enrollment rates, enrollment). Left: the mathematics",
+        "    score, standardized within entry cohort. Right: the",
+        "    standardized mathematics score minus the standardized verbal",
+        "    score. Legend percentages give each component's share of the",
+        "    variance that remains after entry cohort and CAP status. The",
+        "    partition describes where scores vary; a reduction in a",
+        "    component is a statistical account and does not identify a",
+        "    cause. All quantities are conditional on entry to the",
+        "    institution.}",
+        r"  \label{figPreparationVariance}",
+        r"\end{figure}", ""]
+    (dest(out) / "figPreparationVariance.tex").write_text(NL.join(tex),
+                                                          encoding="utf-8")
+
+
+COLS = [("b", "math_score", "math" + NL + "score"),
+        ("b", "verbal_score", "verbal" + NL + "score"),
+        ("b", "agi_rank", "AGI" + NL + "rank"),
+        ("b", "fg:First Generation", "first" + NL + "gen."),
+        ("b", "cap", "CAP"),
+        ("b", "credit_dual_only", "dual" + NL + "credit"),
+        ("b", "credit_exam", "exam" + NL + "credit"),
+        ("c", "district_poverty", "district" + NL + "poverty"),
+        ("c", "advmath_index", "adv. math" + NL + "index")]
+
+
+def subjects(out, outcome="grade"):
+    prim = [r for r in read(out / "q2_primary.csv") if r["outcome"] == outcome]
+    co = {(r["subject"], r["step"], r["term"]): r
+          for r in read(out / "q2_coefficients.csv") if r["outcome"] == outcome}
+    prim.sort(key=lambda r: (r["class"] != "quantitative", -int(r["students"])))
+    nq = sum(r["class"] == "quantitative" for r in prim)
+    ypos = np.arange(len(prim), dtype=float)
+    ypos[nq:] += 0.6
+    vals = [float(v["estimate"]) for v in co.values() if v["estimate"]]
+    vmax = np.percentile(np.abs(vals), 98) if vals else 1.0
+    norm = Normalize(-vmax, vmax)
+    fig, ax = plt.subplots(figsize=(13.9, 0.375 * len(prim) + 2.9))
+    # the last two columns come from the model that adds district and
+    # school terms, so they stand apart from the student columns
+    nb = sum(1 for c in COLS if c[0] == "b")
+    xs = np.array([j + (GAP if c[0] == "c" else 0.0)
+                   for j, c in enumerate(COLS)])
+    for i, r in enumerate(prim):
+        for j, (step, term, _) in enumerate(COLS):
+            c = co.get((r["subject"], step, term))
+            if c is None or not c["estimate"]:
+                continue
+            v, p = float(c["estimate"]), float(c["p"] or 1)
+            if term == "math_score":
+                sig = r["bh_math"] == "1"
+            elif term == "verbal_score":
+                sig = r["bh_verbal"] == "1"
+            else:
+                sig = p < 0.05
+            ax.add_patch(plt.Rectangle((xs[j] + 0.02, ypos[i] - 0.48), 0.96,
+                                       0.96, facecolor=CMAP(norm(v)) if sig
+                                       else "white", edgecolor=GRID,
+                                       linewidth=0.5))
+            ax.text(xs[j] + 0.5, ypos[i], f"{v:+.2f}", ha="center",
+                    va="center", fontsize=14.5,
+                    color=("white" if sig and abs(v) > 0.6 * vmax
+                           else INK if sig else INK_MUTED))
+    ax.set_xlim(0, xs[-1] + 1)
+    ax.set_ylim(ypos[-1] + 0.5, -0.5)
+    ax.set_xticks(xs + 0.5)
+    ax.set_xticklabels([c[2] for c in COLS], fontsize=14.5)
+    ax.xaxis.tick_top()
+    ax.set_yticks(ypos)
+    ax.set_yticklabels([f"{r['subject']}  (n={int(r['students']):,})"
+                        for r in prim], fontsize=15)
+    ax.tick_params(length=0)
+    for s in ax.spines.values():
+        s.set_visible(False)
+    if nq < len(prim):
+        ax.axhline(ypos[nq] - 0.8, color=INK_MUTED, lw=1.0)
+    # how a cell reads: the unit of each column group, the quantity in
+    # every cell, and one worked example under the grid
+    res = json.loads((out / "results.json").read_text(encoding="utf-8"))
+    sd = res["H1"]["math_score_sd_points"]
+    tr = ax.get_xaxis_transform()
+    for a, b, lab in ((0, 3, "per standard deviation"),
+                      (3, nb, "group against reference group"),
+                      (xs[nb], xs[-1] + 1, "per standard deviation")):
+        ax.plot([a + 0.10, b - 0.10], [1.085, 1.085], transform=tr,
+                color=INK_MUTED, lw=1.3, clip_on=False)
+        ax.text((a + b) / 2, 1.095, lab, transform=tr, ha="center",
+                va="bottom", fontsize=13, color=INK_MUTED)
+    for a, b, lab in ((0, nb, "model with student characteristics"),
+                      (xs[nb], xs[-1] + 1, "district and" + NL
+                       + "school terms added")):
+        ax.plot([a + 0.04, b - 0.04], [1.150, 1.150], transform=tr,
+                color=INK, lw=1.6, clip_on=False)
+        ax.text((a + b) / 2, 1.160, lab, transform=tr, ha="center",
+                va="bottom", fontsize=13.5, color=INK, linespacing=1.05)
+    what = ("difference in first-year grade points (4-point scale)"
+            if outcome == "grade" else
+            "difference in the probability of a D, F, or withdrawal")
+    ax.text((xs[-1] + 1) / 2, 1.245, "Each cell: " + what
+            + " between students in the same course and term",
+            transform=tr, ha="center", va="bottom", fontsize=14.5,
+            color=INK)
+    top = co.get((prim[0]["subject"], "b", "math_score"))
+    if top and top["estimate"]:
+        v0 = float(top["estimate"])
+        tail = ("a grade that is, on average, "
+                f"{abs(v0):.2f} points {'higher' if v0 > 0 else 'lower'}"
+                if outcome == "grade" else
+                "a probability of a D, F, or withdrawal that is, on average, "
+                f"{abs(100 * v0):.1f} points "
+                f"{'higher' if v0 > 0 else 'lower'}")
+        ax.text(-0.245, -0.014,
+                f"Example, top-left cell: in {prim[0]['subject']} courses, "
+                "an entrant whose entry mathematics score is one standard "
+                f"deviation ({sd:.0f} points) higher" + NL
+                + "than that of another student in the same course and "
+                f"term has {tail}," + NL
+                + "with the other columns held equal. Gray type on a white "
+                "cell: not distinguishable from zero.",
+                transform=ax.transAxes, ha="left", va="top", fontsize=13.5,
+                color=INK, linespacing=1.3)
+    fig.tight_layout()
+    name = "figSubjectPredictors" + ("" if outcome == "grade" else "DFW")
+    save(fig, dest(out), name)
+    if outcome != "grade":
+        return
+    c0, c1 = cohort_range(out)
+    c1 = min(c1, 2018)
+    v0 = float(co[(prim[0]["subject"], "b", "math_score")]["estimate"])
+    nmin = min(int(r["students"]) for r in prim)
+    key = "; ".join(f"{r['subject']}, {SUBJECT_NAME.get(r['subject'], r['subject'])}"
+                    for r in prim)
+    tex = [
+        f"% Canonical caption for {name}.pdf",
+        "% Generated by: code/module_c/mc_figures.py from q2_primary.csv and",
+        f"% q2_coefficients.csv in code/figures/module_c/{out.name}/",
+        r"\begin{figure}[p]",
+        r"  \centering",
+        r"  \includegraphics[width=0.80\textwidth]{" + name + ".pdf}",
+        r"  \caption{Associations between entry characteristics and",
+        f"    first-year grades in the {len(prim)} subjects in which at",
+        f"    least 1,000 linked entrants of Fall {c0} to Fall {c1} hold a",
+        "    first attempt. Each subject has two regressions with",
+        "    course-by-term fixed effects, so students are compared within",
+        "    the same course and term: the first seven columns come from a",
+        "    model with student characteristics, and the last two from the",
+        "    same model with district and school terms added. Each cell is",
+        "    the difference in grade points (4-point scale) that goes with",
+        "    the column's characteristic, the other characteristics of its",
+        "    model held equal; the figure prints a worked example for the",
+        f"    top-left cell ({abs(v0):.2f} grade points is about a third of",
+        "    a letter grade). Columns marked per standard deviation give",
+        "    the difference that goes with one standard deviation of the",
+        "    characteristic. Columns marked group against reference",
+        "    compare first-generation entrants with entrants who are not",
+        "    first-generation, CAP entrants with other entrants, and",
+        "    entrants holding each type of pre-college mathematics credit",
+        "    with entrants holding none. A shaded cell (blue positive, red",
+        "    negative) has an interval that excludes zero: score columns",
+        "    under false-discovery control at $q=0.05$ across subjects,",
+        f"    other columns at unadjusted $p<0.05$. The {nq} quantitative",
+        "    subjects sit above the rule. The count $n$ is the number of",
+        "    linked entrants with a graded first attempt and can fall",
+        "    below the 1,000 that admit a subject (the smallest is",
+        f"    {nmin:,}). Standard errors are clustered on sending school;",
+        "    every cell is an association conditional on entry.",
+        f"    Subject codes: {key}.}}",
+        r"  \label{" + name + "}",
+        r"\end{figure}", ""]
+    (dest(out) / f"{name}.tex").write_text(NL.join(tex), encoding="utf-8")
+
+
+def weighted_summary(out):
+    """subject coefficients averaged with weights equal to the first
+    attempts in each subject model: a descriptive companion to the
+    registered random-effects pooling, which gives every subject a
+    similar say. Returns {(outcome, class, contrast): (mean, lo, hi)}
+    and writes q2_weighted.csv and q2_weighted_summary.json."""
+    prim = read(out / "q2_primary.csv")
+    cols = {"math": ("math", "math_se"), "verbal": ("verbal", "verbal_se"),
+            "math_minus_verbal": ("math_minus_verbal", "diff_se")}
+    res, rows = {}, []
+    for oc in ("grade", "dfw"):
+        for cls in ("other", "quantitative"):
+            sel = [r for r in prim if r["outcome"] == oc and r["class"] == cls]
+            n = np.array([float(r["rows"]) for r in sel])
+            for con, (bk, sk) in cols.items():
+                bb = np.array([float(r[bk]) for r in sel])
+                se = np.array([float(r[sk]) for r in sel])
+                m = float((n * bb).sum() / n.sum())
+                e = float(np.sqrt(((n * se) ** 2).sum()) / n.sum())
+                res[(oc, cls, con)] = (m, m - 1.96 * e, m + 1.96 * e)
+                rows.append((oc, cls, con, len(sel), int(n.sum()),
+                             f"{m:.4f}", f"{m - 1.96 * e:.4f}",
+                             f"{m + 1.96 * e:.4f}"))
+    with open(dest(out) / "q2_weighted.csv", "w", newline="",
+              encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["outcome", "class", "contrast", "subjects",
+                    "first_attempts", "weighted_mean", "lo_independent",
+                    "hi_independent"])
+        w.writerows(rows)
+    g = [r for r in prim if r["outcome"] == "grade"]
+    tot = sum(float(r["rows"]) for r in g)
+    ok = sum(float(r["rows"]) for r in g
+             if r["bh_math"] == "1" and float(r["math"]) > 0)
+    if DEST and (DEST / "ladder_skill.csv").exists():
+        # corrected evaluation: baseline from training rows only
+        lad = [dict(r, oof_r2=r["r2_against_baseline"])
+               for r in read(DEST / "ladder_skill.csv")
+               if r["target"].startswith("Q2 grade")
+               and r["family"] == "linear" and r["task"].startswith("within")]
+    else:
+        lad = [r for r in read(out / "ladder_skill.csv")
+               if r["target"].startswith("Q2 grade")
+               and r["family"] == "linear" and r["oof_r2"]]
+    ln = np.array([float(r["rows"]) for r in lad])
+    lv = np.array([float(r["oof_r2"]) for r in lad])
+    summary = {
+        "share_of_first_attempts_in_subjects_passing_fdr_math": ok / tot,
+        "subjects_passing": sum(1 for r in g if r["bh_math"] == "1"
+                                and float(r["math"]) > 0),
+        "subjects": len(g),
+        "oof_r2_grade_linear": {
+            "median_across_subjects": float(np.median(lv)),
+            "weighted_by_first_attempts": float((ln * lv).sum() / ln.sum())},
+        "weights": "first attempts (rows) in each subject model"}
+    (dest(out) / "q2_weighted_summary.json").write_text(
+        json.dumps(summary, indent=1), encoding="utf-8")
+    return res
+
+
+def pooled_table(out):
+    rows = [r for r in read(out / "q2_pooled.csv")
+            if r["classification"] == "registered classes"]
+    get = {(r["outcome"], r["class"], r["contrast"]): r for r in rows}
+    wt = weighted_summary(out)
+    joint = DEST is not None and (DEST / "q2_pooled_joint.csv").exists()
+    if joint:
+        # intervals that include the covariance between subject estimates
+        for r in read(DEST / "q2_pooled_joint.csv"):
+            k = (r["outcome"], r["class"], r["contrast"])
+            assert abs(float(get[k]["pooled"]) - float(r["pooled"])) < 2e-4, k
+            get[k] = dict(get[k], lo=r["lo_joint"], hi=r["hi_joint"])
+            # the weighted mean at full precision, with the joint half-width
+            hw = (float(r["w_hi_joint"]) - float(r["w_lo_joint"])) / 2
+            wt[k] = (wt[k][0], wt[k][0] - hw, wt[k][0] + hw)
+
+    def fmt(v, lo, hi, d):
+        return (f"${v:+.{d}f}$ " + r"{\scriptsize("
+                + f"${lo:+.{d}f}$, ${hi:+.{d}f}$" + ")}")
+
+    def cell(oc, cls, con, scale, d):
+        r = get[(oc, cls, con)]
+        return fmt(*(scale * float(r[k]) for k in ("pooled", "lo", "hi")), d)
+
+    def wcell(oc, cls, con, scale, d):
+        return fmt(*(scale * v for v in wt[(oc, cls, con)]), d)
+
+    lines = [
+        "% Generated by code/module_c/mc_figures.py from q2_pooled.csv",
+        "% and q2_primary.csv" + (", with the intervals of"
+                                  if joint else ""),
+        "% " + (f"{DEST.name}/q2_pooled_joint.csv" if joint else ""),
+        r"\begin{table}[tbp]",
+        r"\centering\footnotesize",
+        r"\setlength{\tabcolsep}{4pt}",
+        r"\caption{Coefficients of the two entry scores in the",
+        "  first-year subject models, per standard deviation of each score,",
+        r"  with 95\% intervals. For each outcome and subject class the",
+        "  first row is the prespecified random-effects pooling across",
+        "  subjects, which gives every subject a similar say; the second",
+        "  averages the subject coefficients with weights equal to the",
+        "  first attempts in each subject, a descriptive summary on the",
+        "  scale of the entrants served.",
+        "  Grades are on the 4-point scale; DFW is the probability of a D,",
+        "  F, withdrawal, or no-credit outcome, in percentage points.",
+        ("  The same students and sending schools contribute to several"
+         if joint else "  Students overlap across subjects, so the"
+         " intervals are"),
+        ("  subject models, so the intervals use the joint school-clustered"
+         if joint else "  narrower than independent subjects would give.}"),
+    ] + ([
+        "  covariance of the subject coefficients, a correction made after",
+        "  the plan was frozen (the plan treated subjects as independent).",
+        "  Subjects are quantitative (MAT, CHE, ECO, STA, PHY, CS, ACC) or",
+        "  other, as classed before estimation. Population: linked",
+        f"  entrants of Fall {cohort_range(out)[0]} to Fall",
+        f"  {min(cohort_range(out)[1], 2018)}, a restriction adopted after",
+        "  the prespecified eleven-cohort run.}"] if joint else []) + [
+        r"\label{tab:subjectpooled}",
+        r"\begin{tabular}{@{}llll@{}}",
+        r"\toprule",
+        r"Outcome, subject class (subjects) & Mathematics & Verbal & Mathematics minus verbal \\",
+        r"\midrule"]
+    cons = ("math", "verbal", "math_minus_verbal")
+    for oc, lab, sc, d in (("grade", "Grade points", 1.0, 3),
+                           ("dfw", "DFW, points", 100.0, 1)):
+        for cls in ("other", "quantitative"):
+            k = get[(oc, cls, "math")]["subjects"]
+            lines.append(f"{lab}, {cls} ({k}) & "
+                         + " & ".join(cell(oc, cls, c, sc, d) for c in cons)
+                         + r" \\")
+            lines.append(r"\quad weighted by first attempts & "
+                         + " & ".join(wcell(oc, cls, c, sc, d) for c in cons)
+                         + r" \\")
+    lines += [r"\bottomrule", r"\end{tabular}", r"\end{table}", ""]
+    (dest(out) / "tabSubjectPooled.tex").write_text(NL.join(lines),
+                                                    encoding="utf-8")
+
+
+if __name__ == "__main__":
+    out = BASE / (sys.argv[1] if len(sys.argv) > 1 else "registered")
+    if len(sys.argv) > 2:
+        DEST = BASE / sys.argv[2]
+        DEST.mkdir(parents=True, exist_ok=True)
+    for old in dest(out).glob("figModuleC*"):
+        old.unlink()
+    variance(out)
+    subjects(out, "grade")
+    subjects(out, "dfw")
+    pooled_table(out)
+    print("figures written to", dest(out))

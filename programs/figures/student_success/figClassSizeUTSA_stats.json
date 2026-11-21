@@ -1,0 +1,12 @@
+{
+ "min_students": 10,
+ "bin": 5,
+ "hp_lambda": 10000.0,
+ "mat_curve": {
+  "smallest_size": 15,
+  "gpa_at_smallest_size": 2.3914265904217253,
+  "reference_size": 200,
+  "gpa_at_reference_size": 1.808342273725977,
+  "largest_size": 240
+ }
+}

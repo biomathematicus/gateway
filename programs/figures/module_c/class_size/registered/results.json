@@ -1,0 +1,83 @@
+{
+ "mode": "registered estimation",
+ "seed": 20261119,
+ "cap": 45,
+ "cohorts": [
+  2014,
+  2018
+ ],
+ "subjects_modeled": [
+  "AIS",
+  "MAT",
+  "POL",
+  "HIS",
+  "CHE",
+  "BIO",
+  "PSY",
+  "SOC",
+  "ECO",
+  "ANT",
+  "GEO",
+  "STA",
+  "MUS",
+  "ES",
+  "PHY",
+  "AHC",
+  "KIN",
+  "ART",
+  "ACC",
+  "GRG"
+ ],
+ "subjects_outside_entry_rule": [
+  "WRC",
+  "IS",
+  "SPN",
+  "CS",
+  "COM"
+ ],
+ "solver_agreement": 7.605027718682322e-15,
+ "share_wild_p_below_0.05": {
+  "m3": 0.1,
+  "m4_interaction": 0.2,
+  "tests": 40
+ },
+ "scenario_all_subjects": {
+  "cap": 45,
+  "subjects": 20,
+  "dfw_outcomes_per_cohort": 11.751958040414227,
+  "lo": -295.34119220604504,
+  "hi": 318.8451082868735,
+  "first_attempts": 150032,
+  "affected": 118111,
+  "sections_per_year": 1085.8,
+  "sections_added_per_year": 1085.6,
+  "note": "interval assumes independent subject estimates"
+ },
+ "H3": {
+  "mat_m3_grade_per_doubling": -0.042575151765878096,
+  "lo": -0.11652904615238119,
+  "hi": 0.031378742620625004,
+  "wild_bootstrap_p": 0.258,
+  "mat_m3_dfw_per_doubling": 0.009784268058424875,
+  "dfw_lo": -0.01313104521767328,
+  "dfw_hi": 0.032699581334523026,
+  "dfw_wild_bootstrap_p": 0.361,
+  "student_fe_mat_grade": -0.0258,
+  "supported": false
+ },
+ "H4": {
+  "mat_m4_size_x_math_grade": 0.04612542229325813,
+  "lo": 0.0045953720533958575,
+  "hi": 0.08765547253312041,
+  "wild_bootstrap_p": 0.027,
+  "supported": true
+ },
+ "leniency_check": {
+  "next_grade_per_doubling_given_origin_grade": 0.0268,
+  "lo": -0.0774,
+  "hi": 0.131,
+  "wild_bootstrap_p": 0.561,
+  "leniency_indicated": false
+ },
+ "seconds": 344
+}

@@ -1,0 +1,36 @@
+{
+ "mode": "post-registration corrections (addendum Section 14, D1)",
+ "seed": 20311119,
+ "bootstrap_draws": 999,
+ "contrast_solver_agreement": 8.968520370800093e-16,
+ "subject_correlation_grade": {
+  "mean_off_diagonal": 0.001926503556906235,
+  "largest_absolute": 0.09122728454617521,
+  "mean_off_diagonal_instructors_only": 0.0011507160854799358,
+  "students": 23467,
+  "students_in_two_or_more_subjects": 23210
+ },
+ "scenario_all_subjects_joint": {
+  "dfw_outcomes_per_cohort": 11.751958040416259,
+  "lo": -297.44311050614704,
+  "hi": 320.9470265869795,
+  "lo_independent": -295.2245802020685,
+  "hi_independent": 318.728496282901
+ },
+ "subject_correlation_dfw": {
+  "mean_off_diagonal": 0.001532076005542459,
+  "largest_absolute": 0.04572911620020337,
+  "mean_off_diagonal_instructors_only": 0.00012711184199997277,
+  "students": 23751,
+  "students_in_two_or_more_subjects": 23580
+ },
+ "next_course_flow": {
+  "origin_first_attempts": 19271,
+  "take_a_later_mathematics_course": 7968,
+  "with_grades_in_both_courses": 6510,
+  "next_section_identified": 6510,
+  "next_course_different_instructor": 5934,
+  "next_course_same_instructor": 576
+ },
+ "seconds": 39
+}

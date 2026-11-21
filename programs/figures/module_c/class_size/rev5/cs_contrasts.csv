@@ -1,0 +1,17 @@
+outcome,contrast,unit,first_attempts,estimate,wild_lo,wild_hi,p_wild_bootstrap,inverted_lo,inverted_hi,cluster_t_lo,cluster_t_hi,p_cluster_t,instructor_clusters
+grade,"cap scenario, lowest third",per affected first attempt,6388,0.1207,-0.0078,0.2492,0.0820,-0.0042,0.2574,0.0089,0.2325,0.0348,73
+grade,"cap scenario, middle third",per affected first attempt,6242,0.0611,-0.0479,0.1702,0.2710,-0.0482,0.1780,-0.0268,0.1491,0.1702,73
+grade,"cap scenario, highest third",per affected first attempt,4889,-0.0054,-0.1106,0.0998,0.9160,-0.1030,0.0970,-0.0938,0.0829,0.9027,73
+grade,"cap scenario, all affected",per affected first attempt,17519,0.0643,-0.0442,0.1727,0.2610,-0.0439,0.1861,-0.0241,0.1527,0.1516,73
+grade,size slope at entry score -1 SD,per doubling of section size,24666,-0.0889,-0.1827,0.0049,0.0630,-0.1898,0.0026,-0.1691,-0.0088,0.0301,73
+grade,size slope at entry score +0 SD,per doubling of section size,24666,-0.0428,-0.1147,0.0291,0.2510,-0.1266,0.0280,-0.1029,0.0173,0.1600,73
+grade,size slope at entry score +1 SD,per doubling of section size,24666,0.0033,-0.0718,0.0785,0.9310,-0.0704,0.0743,-0.0569,0.0636,0.9126,73
+grade,size-by-score interaction,per doubling and per SD of the entry score,24666,0.0461,0.0059,0.0864,0.0330,0.0062,0.0854,0.0085,0.0837,0.0169,73
+dfw,"cap scenario, lowest third",per affected first attempt,5904,-4.6342,-8.8553,-0.4131,0.0340,-8.8528,-0.1652,-8.2240,-1.0445,0.0121,74
+dfw,"cap scenario, middle third",per affected first attempt,7044,-1.5714,-5.0951,1.9523,0.3440,-4.7884,1.6572,-4.2224,1.0795,0.2413,74
+dfw,"cap scenario, highest third",per affected first attempt,5553,1.9714,-1.2992,5.2420,0.2450,-1.5403,4.9741,-0.8701,4.8129,0.1710,74
+dfw,"cap scenario, all affected",per affected first attempt,18501,-1.4855,-4.5794,1.6085,0.3400,-4.7554,1.6837,-4.1025,1.1316,0.2617,74
+dfw,size slope at entry score -1 SD,per doubling of section size,27576,3.3114,0.1886,6.4341,0.0380,0.2729,6.5226,0.7901,5.8327,0.0108,74
+dfw,size slope at entry score +0 SD,per doubling of section size,27576,0.9246,-1.2884,3.1375,0.3720,-1.3073,3.0843,-0.8486,2.6978,0.3022,74
+dfw,size slope at entry score +1 SD,per doubling of section size,27576,-1.4623,-3.7168,0.7923,0.2130,-3.5767,0.9395,-3.4411,0.5166,0.1451,74
+dfw,size-by-score interaction,per doubling and per SD of the entry score,27576,-2.3868,-4.1829,-0.5907,0.0120,-3.9101,-0.6464,-3.7983,-0.9754,0.0012,74

@@ -1,0 +1,690 @@
+{
+ "window": {
+  "from_term": "2014.66",
+  "to_term": "2019.66",
+  "rule": "at least one course record in a term of the window (course-record table)"
+ },
+ "parameters": {
+  "min_cell": 10,
+  "usable_decisions": [
+   "auto",
+   "auto_adj",
+   "auto_vint",
+   "auto_ccd"
+  ],
+  "first_course_dfw": [
+   "D",
+   "D+",
+   "D-",
+   "F",
+   "W",
+   "IN",
+   "NC",
+   "NR"
+  ],
+  "band_edges_pct": [
+   2.0,
+   5.0
+  ],
+  "poverty_vintages": [
+   2010,
+   2018
+  ],
+  "poverty_bin": 2.5,
+  "primary_miles": 10.0,
+  "strict_miles": 5.0,
+  "far_miles": 100.0,
+  "edge_cycle": "2017-18"
+ },
+ "course_records": {
+  "n_extract": 1984991,
+  "n_in_window": 1236347,
+  "first_term": 2009.66,
+  "last_term": 2019.66
+ },
+ "tract_assignment": {
+  "n_zctas": 28863,
+  "best_tract_share_median_unweighted": 0.7415
+ },
+ "crosswalk": {
+  "n_name_rows": 1663,
+  "n_name_rows_by_decision": {
+   "none": 221,
+   "auto": 1229,
+   "private": 129,
+   "auto_ccd": 36,
+   "rejected": 13,
+   "auto_adj": 26,
+   "auto_vint": 9
+  },
+  "n_name_city_pairs_with_several_zip_rows": 4,
+  "n_recorded_names_absent_from_crosswalk": 0
+ },
+ "school_table": {
+  "n_schools": 23170,
+  "vintage_check": {
+   "2011-12": {
+    "n_schools": 19523,
+    "n_equal": 1505,
+    "pct_equal": 7.708856220867695
+   },
+   "2013-14": {
+    "n_schools": 17974,
+    "n_equal": 353,
+    "pct_equal": 1.963947924780238
+   },
+   "2015-16": {
+    "n_schools": 19050,
+    "n_equal": 447,
+    "pct_equal": 2.3464566929133857
+   },
+   "2017-18": {
+    "n_schools": 19961,
+    "n_equal": 19961,
+    "pct_equal": 100.0
+   },
+   "2021-22": {
+    "n_schools": 19090,
+    "n_equal": 385,
+    "pct_equal": 2.0167627029858566
+   }
+  }
+ },
+ "extract_totals": {
+  "n_students": 92769,
+  "n_students_of_credit_table": 86165,
+  "n_absent_from_student_table": 6604
+ },
+ "active": {
+  "coverage": {
+   "n_students": 68558,
+   "n_texas_name": 60045,
+   "n_no_name": 967,
+   "n_name_outside_texas": 7546,
+   "n_by_decision": {
+    "auto": 53020,
+    "auto_ccd": 557,
+    "private": 2261,
+    "none": 3048,
+    "auto_adj": 856,
+    "rejected": 275,
+    "auto_vint": 28
+   },
+   "stages": [
+    {
+     "stage": "auto",
+     "n_added": 53020,
+     "n_usable": 53020,
+     "pct_usable": 88.30044133566491
+    },
+    {
+     "stage": "auto_adj",
+     "n_added": 856,
+     "n_usable": 53876,
+     "pct_usable": 89.72603880423016
+    },
+    {
+     "stage": "auto_vint",
+     "n_added": 28,
+     "n_usable": 53904,
+     "pct_usable": 89.77267049712715
+    },
+    {
+     "stage": "auto_ccd",
+     "n_added": 557,
+     "n_usable": 54461,
+     "pct_usable": 90.70030810225664
+    }
+   ],
+   "n_usable": 54461,
+   "pct_usable": 90.70030810225664,
+   "n_name_rows": 1583,
+   "n_names": 1498,
+   "n_name_rows_by_decision": {
+    "auto": 1181,
+    "auto_ccd": 33,
+    "private": 118,
+    "none": 206,
+    "auto_adj": 25,
+    "rejected": 13,
+    "auto_vint": 7
+   },
+   "n_private": 2261,
+   "pct_private": 3.765509201432259,
+   "n_matched_schools": 1192,
+   "n_matched_districts": 749,
+   "pct_with_name": 98.589515446775,
+   "n_absent_from_student_table": 6604,
+   "n_matched_schools_in_table": 1129,
+   "pct_matched_schools_in_table": 94.71476510067114
+  },
+  "disposition": {
+   "n_students": 61954,
+   "n_by_group": {
+    "outside_texas": 6945,
+    "matched": 49099,
+    "unresolved": 2749,
+    "no_school": 859,
+    "private": 2058,
+    "rejected": 244
+   },
+   "n_unresolved_absent_from_crosswalk": 13
+  },
+  "audit": {
+   "cells": {
+    "outside_texas": {
+     "n_students": 6945,
+     "pct_ap": 0.9647228221742261,
+     "n_ap": 6945,
+     "pct_dual": 3.0093592512598994,
+     "n_dual": 6945,
+     "mean_sat": 559.6406660823839,
+     "n_sat": 2282,
+     "pct_pell": 35.377969762419006,
+     "n_pell": 6945,
+     "pct_first_gen": 41.0685215332248,
+     "n_first_gen": 6757,
+     "pct_first_dfw": 27.582822085889568,
+     "n_first_dfw": 4075,
+     "pct_transfer": 70.9719222462203,
+     "n_transfer": 6945
+    },
+    "all": {
+     "n_students": 61954,
+     "pct_ap": 2.5325241308067277,
+     "n_ap": 61954,
+     "pct_dual": 11.45688736804726,
+     "n_dual": 61954,
+     "mean_sat": 554.621460473917,
+     "n_sat": 45451,
+     "pct_pell": 44.87361590857733,
+     "n_pell": 61954,
+     "pct_first_gen": 46.36094482040603,
+     "n_first_gen": 61472,
+     "pct_first_dfw": 30.46699860773533,
+     "n_first_dfw": 42377,
+     "pct_transfer": 42.83339251702876,
+     "n_transfer": 61954
+    },
+    "matched": {
+     "n_students": 49099,
+     "pct_ap": 2.867675512739567,
+     "n_ap": 49099,
+     "pct_dual": 12.594961200839123,
+     "n_dual": 49099,
+     "mean_sat": 554.7903254764165,
+     "n_sat": 38989,
+     "pct_pell": 46.56102975620684,
+     "n_pell": 49099,
+     "pct_first_gen": 47.6743233836957,
+     "n_first_gen": 48846,
+     "pct_first_dfw": 30.601554087482903,
+     "n_first_dfw": 34361,
+     "pct_transfer": 38.487545571192896,
+     "n_transfer": 49099
+    },
+    "unresolved": {
+     "n_students": 2749,
+     "pct_ap": 2.0734812659148782,
+     "n_ap": 2749,
+     "pct_dual": 17.060749363404877,
+     "n_dual": 2749,
+     "mean_sat": 549.1333632689717,
+     "n_sat": 2227,
+     "pct_pell": 48.85412877409967,
+     "n_pell": 2749,
+     "pct_first_gen": 46.440306681270535,
+     "n_first_gen": 2739,
+     "pct_first_dfw": 32.47422680412371,
+     "n_first_dfw": 1940,
+     "pct_transfer": 34.84903601309567,
+     "n_transfer": 2749
+    },
+    "no_school": {
+     "n_students": 859,
+     "pct_ap": 0.0,
+     "n_ap": 859,
+     "pct_dual": 0.6984866123399301,
+     "n_dual": 859,
+     "mean_sat": 507.2093023255814,
+     "n_sat": 43,
+     "pct_pell": 59.37136204889406,
+     "n_pell": 859,
+     "pct_first_gen": 59.37873357228196,
+     "n_first_gen": 837,
+     "pct_first_dfw": 46.666666666666664,
+     "n_first_dfw": 330,
+     "pct_transfer": 100.0,
+     "n_transfer": 859
+    },
+    "private": {
+     "n_students": 2058,
+     "pct_ap": 1.6034985422740524,
+     "n_ap": 2058,
+     "pct_dual": 8.60058309037901,
+     "n_dual": 2058,
+     "mean_sat": 553.0945390487375,
+     "n_sat": 1703,
+     "pct_pell": 25.704567541302236,
+     "n_pell": 2058,
+     "pct_first_gen": 27.75609756097561,
+     "n_first_gen": 2050,
+     "pct_first_dfw": 28.181212524983344,
+     "n_first_dfw": 1501,
+     "pct_transfer": 39.1156462585034,
+     "n_transfer": 2058
+    },
+    "rejected": {
+     "n_students": 244,
+     "pct_ap": 1.639344262295082,
+     "n_ap": 244,
+     "pct_dual": 21.721311475409834,
+     "n_dual": 244,
+     "mean_sat": 548.9371980676328,
+     "n_sat": 207,
+     "pct_pell": 41.39344262295082,
+     "n_pell": 244,
+     "pct_first_gen": 40.74074074074074,
+     "n_first_gen": 243,
+     "pct_first_dfw": 38.23529411764706,
+     "n_first_dfw": 170,
+     "pct_transfer": 36.47540983606557,
+     "n_transfer": 244
+    }
+   },
+   "matched_vs_unresolved": {
+    "ap": {
+     "mean_a": 0.02867675512739567,
+     "mean_b": 0.020734812659148782,
+     "diff": -0.007941942468246886,
+     "se": 0.002820689467013352,
+     "z": -2.815603263359615,
+     "n_a": 49099,
+     "n_b": 2749,
+     "se_clustered": 0.005258539054054292,
+     "z_clustered": -1.5102944727820766,
+     "n_schools_a": 1209,
+     "n_schools_b": 197
+    },
+    "dual": {
+     "mean_a": 0.12594961200839122,
+     "mean_b": 0.17060749363404876,
+     "diff": 0.044657881625657536,
+     "se": 0.007330373731196386,
+     "z": 6.0921698215199935,
+     "n_a": 49099,
+     "n_b": 2749,
+     "se_clustered": 0.031883743958192046,
+     "z_clustered": 1.4006473544705331,
+     "n_schools_a": 1209,
+     "n_schools_b": 197
+    },
+    "sat": {
+     "mean_a": 554.7903254764165,
+     "mean_b": 549.1333632689717,
+     "diff": -5.656962207444735,
+     "se": 1.6349607667301478,
+     "z": -3.4599987489353765,
+     "n_a": 38989,
+     "n_b": 2227,
+     "se_clustered": 5.382062778474981,
+     "z_clustered": -1.0510769644065072,
+     "n_schools_a": 1098,
+     "n_schools_b": 171
+    },
+    "pell": {
+     "mean_a": 0.46561029756206845,
+     "mean_b": 0.4885412877409967,
+     "diff": 0.022930990178928246,
+     "se": 0.009797716228654487,
+     "z": 2.3404423687903995,
+     "n_a": 49099,
+     "n_b": 2749,
+     "se_clustered": 0.031852449758674364,
+     "z_clustered": 0.719912922009506,
+     "n_schools_a": 1209,
+     "n_schools_b": 197
+    },
+    "first_gen": {
+     "mean_a": 0.476743233836957,
+     "mean_b": 0.4644030668127054,
+     "diff": -0.012340167024251614,
+     "se": 0.009795503217074553,
+     "z": -1.25977877305389,
+     "n_a": 48846,
+     "n_b": 2739,
+     "se_clustered": 0.03588831498493846,
+     "z_clustered": -0.34384916175168745,
+     "n_schools_a": 1205,
+     "n_schools_b": 197
+    },
+    "first_dfw": {
+     "mean_a": 0.306015540874829,
+     "mean_b": 0.3247422680412371,
+     "diff": 0.018726727166408108,
+     "se": 0.010921190117199237,
+     "z": 1.7147148768078233,
+     "n_a": 34361,
+     "n_b": 1940,
+     "se_clustered": 0.018319608894053117,
+     "z_clustered": 1.0222230875511293,
+     "n_schools_a": 1105,
+     "n_schools_b": 173
+    },
+    "transfer": {
+     "mean_a": 0.38487545571192894,
+     "mean_b": 0.3484903601309567,
+     "diff": -0.03638509558097225,
+     "se": 0.009351136761951196,
+     "z": -3.890981011957757,
+     "n_a": 49099,
+     "n_b": 2749,
+     "se_clustered": 0.028776155666226877,
+     "z_clustered": -1.2644182219126512,
+     "n_schools_a": 1209,
+     "n_schools_b": 197
+    }
+   }
+  },
+  "provision": {
+   "n_students": 48168,
+   "n_schools": 1106,
+   "n_schools_blank_ap": 0,
+   "cells": [
+    {
+     "ap_offer_band": "0. offers no AP maths",
+     "n_students": 2058,
+     "n_schools": 310,
+     "median_school_enrollment": 266.5,
+     "pct_ap": 0.5830903790087464,
+     "pct_dual": 29.98056365403304
+    },
+    {
+     "ap_offer_band": "1. under 2%",
+     "n_students": 5889,
+     "n_schools": 208,
+     "median_school_enrollment": 1103.0,
+     "pct_ap": 0.8320597724571235,
+     "pct_dual": 15.53744268976057
+    },
+    {
+     "ap_offer_band": "2. 2-5%",
+     "n_students": 20767,
+     "n_schools": 346,
+     "median_school_enrollment": 1519.0,
+     "pct_ap": 1.6323975538113353,
+     "pct_dual": 12.02869937882217
+    },
+    {
+     "ap_offer_band": "3. over 5%",
+     "n_students": 19454,
+     "n_schools": 242,
+     "median_school_enrollment": 1598.5,
+     "pct_ap": 5.083787395908296,
+     "pct_dual": 10.321784722936156
+    }
+   ]
+  },
+  "sending_poverty": {
+   "n_students": 53367,
+   "n_students_outside_frame": 1094,
+   "n_districts": 682,
+   "median_student_weighted": 16.288981193371733,
+   "median_child_weighted": 21.910461801540244,
+   "largest_bin": {
+    "low": 15.0,
+    "high": 17.5,
+    "pct_students": 35.703712031779936
+   },
+   "n_bins_pooled": 0,
+   "top_districts": [
+    {
+     "leaid": "4833120",
+     "name": "Northside Independent School District",
+     "n_students": 9573,
+     "pov_rate": 16.288981193371733
+    },
+    {
+     "leaid": "4832940",
+     "name": "North East Independent School District",
+     "n_students": 6371,
+     "pov_rate": 15.789187107695978
+    },
+    {
+     "leaid": "4838730",
+     "name": "San Antonio Independent School District",
+     "n_students": 1736,
+     "pov_rate": 36.77076061041359
+    },
+    {
+     "leaid": "4816110",
+     "name": "Cypress-Fairbanks Independent School District",
+     "n_students": 1124,
+     "pov_rate": 15.006630096953861
+    },
+    {
+     "leaid": "4819650",
+     "name": "Fort Bend Independent School District",
+     "n_students": 1083,
+     "pov_rate": 11.080916621201887
+    },
+    {
+     "leaid": "4843650",
+     "name": "United Independent School District",
+     "n_students": 1065,
+     "pov_rate": 31.147164094997006
+    },
+    {
+     "leaid": "4814730",
+     "name": "Comal Independent School District",
+     "n_students": 968,
+     "pov_rate": 10.596718007796568
+    },
+    {
+     "leaid": "4824990",
+     "name": "Judson Independent School District",
+     "n_students": 960,
+     "pov_rate": 18.87395724379798
+    },
+    {
+     "leaid": "4825170",
+     "name": "Katy Independent School District",
+     "n_students": 924,
+     "pov_rate": 10.013962859234406
+    },
+    {
+     "leaid": "4839480",
+     "name": "Schertz-Cibolo-Universal City Independent School District",
+     "n_students": 923,
+     "pov_rate": 8.63336078437623
+    }
+   ],
+   "histogram": [
+    {
+     "bin_low": 0.0,
+     "bin_high": 2.5,
+     "pct_texas_children": 0.0,
+     "pct_students": 0.0
+    },
+    {
+     "bin_low": 2.5,
+     "bin_high": 5.0,
+     "pct_texas_children": 1.4219305911300784,
+     "pct_students": 0.4703281053834767
+    },
+    {
+     "bin_low": 5.0,
+     "bin_high": 7.5,
+     "pct_texas_children": 3.7084453007413454,
+     "pct_students": 1.9468960218861844
+    },
+    {
+     "bin_low": 7.5,
+     "bin_high": 10.0,
+     "pct_texas_children": 6.473468111268163,
+     "pct_students": 6.732625030449529
+    },
+    {
+     "bin_low": 10.0,
+     "bin_high": 12.5,
+     "pct_texas_children": 10.47845739532168,
+     "pct_students": 9.72511102366631
+    },
+    {
+     "bin_low": 12.5,
+     "bin_high": 15.0,
+     "pct_texas_children": 3.9127505373100173,
+     "pct_students": 2.6027320254089608
+    },
+    {
+     "bin_low": 15.0,
+     "bin_high": 17.5,
+     "pct_texas_children": 12.853200191185254,
+     "pct_students": 35.703712031779936
+    },
+    {
+     "bin_low": 17.5,
+     "bin_high": 20.0,
+     "pct_texas_children": 4.18618251029914,
+     "pct_students": 3.708284145633069
+    },
+    {
+     "bin_low": 20.0,
+     "bin_high": 22.5,
+     "pct_texas_children": 8.573082175258502,
+     "pct_students": 5.136132816159799
+    },
+    {
+     "bin_low": 22.5,
+     "bin_high": 25.0,
+     "pct_texas_children": 10.083236985908801,
+     "pct_students": 6.595836378286207
+    },
+    {
+     "bin_low": 25.0,
+     "bin_high": 27.5,
+     "pct_texas_children": 6.9146944699103905,
+     "pct_students": 2.40785504150505
+    },
+    {
+     "bin_low": 27.5,
+     "bin_high": 30.0,
+     "pct_texas_children": 2.4079343948186738,
+     "pct_students": 0.9818801881312421
+    },
+    {
+     "bin_low": 30.0,
+     "bin_high": 32.5,
+     "pct_texas_children": 11.635288207432803,
+     "pct_students": 7.896265482414226
+    },
+    {
+     "bin_low": 32.5,
+     "bin_high": 35.0,
+     "pct_texas_children": 7.721410793902388,
+     "pct_students": 3.2904229205314146
+    },
+    {
+     "bin_low": 35.0,
+     "bin_high": 37.5,
+     "pct_texas_children": 3.253696120571591,
+     "pct_students": 6.1442464444319524
+    },
+    {
+     "bin_low": 37.5,
+     "bin_high": 40.0,
+     "pct_texas_children": 1.2690724940556128,
+     "pct_students": 1.5646373226900518
+    },
+    {
+     "bin_low": 40.0,
+     "bin_high": 42.5,
+     "pct_texas_children": 1.1793597437797543,
+     "pct_students": 0.8881893304851313
+    },
+    {
+     "bin_low": 42.5,
+     "bin_high": 45.0,
+     "pct_texas_children": 2.179975498545459,
+     "pct_students": 2.992485993216782
+    },
+    {
+     "bin_low": 45.0,
+     "bin_high": 47.5,
+     "pct_texas_children": 0.1031687095603568,
+     "pct_students": 0.22485805835066613
+    },
+    {
+     "bin_low": 47.5,
+     "bin_high": 50.0,
+     "pct_texas_children": 0.07093305271484633,
+     "pct_students": 0.06558360035227763
+    },
+    {
+     "bin_low": 50.0,
+     "bin_high": 52.5,
+     "pct_texas_children": 1.5737127162851272,
+     "pct_students": 0.9219180392377312
+    },
+    {
+     "bin_low": 52.5,
+     "bin_high": 55.0,
+     "pct_texas_children": 0.0,
+     "pct_students": 0.0
+    },
+    {
+     "bin_low": 55.0,
+     "bin_high": 57.5,
+     "pct_texas_children": 0.0,
+     "pct_students": 0.0
+    },
+    {
+     "bin_low": 57.5,
+     "bin_high": 60.0,
+     "pct_texas_children": 0.0,
+     "pct_students": 0.0
+    }
+   ]
+  },
+  "distance": {
+   "zip_to_zip": {
+    "n_students": 64487.0,
+    "n_geocoded": 60896.0,
+    "p50": 3.785966678963367,
+    "p90": 21.19695062015644,
+    "p95": 208.50854774075455,
+    "pct_within_strict": 59.13114161849711,
+    "pct_within_primary": 79.9502430373095,
+    "pct_same_zip": 38.62322648449816,
+    "pct_far": 6.51602732527588,
+    "n_far": 3968.0,
+    "far_top_home_prefix": "782",
+    "far_top_home_share": 63.646673387096776,
+    "n_misread_school_zip": 76
+   },
+   "zip_to_school_point": {
+    "n_students": 54080.0,
+    "point_pct_zero": 0.29770710059171596,
+    "point_pct_within_strict": 63.02792159763314,
+    "point_pct_within_primary": 83.46616124260355,
+    "zip_pct_zero": 44.400887573964496,
+    "zip_pct_within_primary": 84.84282544378698
+   }
+  },
+  "neighborhood": {
+   "n_students": 68558,
+   "n_with_home_zip": 68533,
+   "n_covered": 66993,
+   "pct_covered": 97.717261297004,
+   "best_tract_share_median": 0.2181,
+   "tracts_per_zip_mean": 10.740662259561578,
+   "tracts_with_context_per_zip_mean": 9.932911996895939
+  },
+  "directory_recovery": {
+   "n_students": 557,
+   "n_in_original_directory": 532,
+   "pct_in_original_directory": 95.51166965888689,
+   "n_names": 36
+  }
+ }
+}

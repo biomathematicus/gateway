@@ -1,0 +1,65 @@
+{
+ "cycle": "2017-18",
+ "subject": "calculus",
+ "n_districts": 9790,
+ "n_bexar": 15,
+ "n_with_income": 9775,
+ "districts_reporting_zero": 2321,
+ "per_hs_student": {
+  "mean": 0.0463029125536071,
+  "slope": -0.17066105644955487,
+  "se_state_cluster": 0.020006379467731684,
+  "z": -8.530331873631324,
+  "rel10_pct": -36.85752084212249
+ },
+ "per_hs_student_unweighted": {
+  "slope": -0.17929240387800022,
+  "se_state_cluster": 0.018504841619467305,
+  "rel10_pct": -46.084725590592925
+ },
+ "texas": {
+  "n_districts": 860,
+  "mean": 0.03353903919375933,
+  "slope": -0.08282738510114145,
+  "se_robust": 0.02272140291953066,
+  "rel10_pct": -24.695813324477495
+ },
+ "income": {
+  "weighted_pearson": 0.4478138011372475,
+  "spearman": 0.40956981850713264
+ },
+ "income_poverty_pearson_unweighted": -0.7245448122124278,
+ "bexar_landmarks": {
+  "Alamo Heights ISD": {
+   "pov_rate": 0.07020974049057946,
+   "income_k": 61.06,
+   "per_hs_student": 0.12040557667934093,
+   "ratio_to_national": 2.6003888316948016
+  },
+  "Edgewood ISD": {
+   "pov_rate": 0.39112404510731175,
+   "income_k": 28.16,
+   "per_hs_student": 0.00665043643489104,
+   "ratio_to_national": 0.1436289008211203
+  },
+  "North East ISD": {
+   "pov_rate": 0.14265167527546055,
+   "income_k": 51.63,
+   "per_hs_student": 0.04258934699888712,
+   "ratio_to_national": 0.9197984457150378
+  },
+  "Northside ISD": {
+   "pov_rate": 0.15233715208930013,
+   "income_k": 52.05,
+   "per_hs_student": 0.04270176967834551,
+   "ratio_to_national": 0.9222264286054928
+  },
+  "San Antonio ISD": {
+   "pov_rate": 0.3289964928159294,
+   "income_k": 31.7,
+   "per_hs_student": 0.022589091802381736,
+   "ratio_to_national": 0.48785466305665465
+  }
+ },
+ "districts_above_display": 112
+}

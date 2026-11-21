@@ -1,0 +1,10 @@
+{
+ "share_of_first_attempts_in_subjects_passing_fdr_math": 0.9823529789790948,
+ "subjects_passing": 24,
+ "subjects": 25,
+ "oof_r2_grade_linear": {
+  "median_across_subjects": 0.086,
+  "weighted_by_first_attempts": 0.1026388298726921
+ },
+ "weights": "first attempts (rows) in each subject model"
+}

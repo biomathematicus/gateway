@@ -1,0 +1,33 @@
+{
+ "n_rows_full": 381819,
+ "n_rows_balanced": 354639,
+ "vintages": [
+  1995,
+  2024
+ ],
+ "n_vintages": 28,
+ "n_leaid_ever": 15007,
+ "n_leaid_all_years": 12659,
+ "pct_leaid_persistent": 84.4,
+ "var_between": 0.0072615831206142,
+ "var_within": 0.0016570043818923835,
+ "mean_years_per_district": 27.992659246980818,
+ "icc": 0.8142,
+ "rho_lag1": 0.9462,
+ "rho_lag5": 0.8715,
+ "rho_lag10": 0.8219,
+ "rho_lag20": 0.7722,
+ "rho_lag_max": 0.7262,
+ "max_lag": 27,
+ "diag_share_1995_2024": 27.1,
+ "within1_share_1995_2024": 60.4,
+ "transition_years": [
+  1995,
+  2024
+ ],
+ "figures": [
+  "../figures/001_rank_persistence.png",
+  "../figures/001_decile_transition.png",
+  "../figures/001_district_count.png"
+ ]
+}

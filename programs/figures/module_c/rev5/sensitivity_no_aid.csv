@@ -1,0 +1,12 @@
+model,quantity,unit,with_aid_variables,lo,hi,without_aid_variables,lo_without,hi_without
+preparation: mathematics score,advmath_index,"per SD of the predictor, in SD of the score (one SD is 71 points)",0.1364,0.1008,0.1720,0.1378,0.1013,0.1744
+preparation: mathematics score,district_poverty,"per SD of the predictor, in SD of the score (one SD is 71 points)",-0.1464,-0.1742,-0.1185,-0.1605,-0.1887,-0.1323
+preparation: mathematics minus verbal,advmath_index,"per SD of the predictor, in SD of the score (one SD is 71 points)",0.0269,0.0077,0.0460,0.0268,0.0076,0.0460
+preparation: mathematics minus verbal,district_poverty,"per SD of the predictor, in SD of the score (one SD is 71 points)",-0.0029,-0.0220,0.0161,-0.0005,-0.0196,0.0186
+"first-year grades, non-quantitative subjects",mathematics score,pooled grade points per SD (independent-subject interval),0.1401,0.1115,0.1687,0.1453,0.1170,0.1736
+"first-year grades, non-quantitative subjects",verbal score,pooled grade points per SD (independent-subject interval),0.1124,0.0705,0.1544,0.1178,0.0757,0.1599
+"first-year grades, non-quantitative subjects",mathematics minus verbal,pooled grade points per SD (independent-subject interval),0.0267,-0.0109,0.0643,0.0263,-0.0114,0.0640
+"first-year grades, quantitative subjects",mathematics score,pooled grade points per SD (independent-subject interval),0.2625,0.1998,0.3253,0.2650,0.2017,0.3283
+"first-year grades, quantitative subjects",verbal score,pooled grade points per SD (independent-subject interval),0.0648,0.0019,0.1277,0.0687,0.0055,0.1319
+"first-year grades, quantitative subjects",mathematics minus verbal,pooled grade points per SD (independent-subject interval),0.1967,0.0769,0.3164,0.1954,0.0749,0.3159
+first-year grades,subjects where the mathematics score passes false-discovery control with a positive sign,of 25,24,,,24,,

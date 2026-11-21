@@ -1,0 +1,28 @@
+# Connection of the project database (PostgreSQL 16 with PostGIS).
+# Copy this file to config.toml and set the values of your installation.
+# The password is read from env/secrets.env (a line PGPASSWORD=...), which
+# is never tracked.
+[db]
+host = "localhost"
+port = 5432
+dbname = "GATEWAY"
+user = "postgres"
+
+# The raw public files (data_manifest.csv at the root of the repository)
+# are not configured here. The loaders look for them in the folder named
+# by the environment variable GATEWAY_DATA, or in data/ beside programs/
+# (programs/gateway/paths.py).
+
+# Second PostgreSQL service: the College Scorecard tables (paper0/pg.py).
+# A user-space cluster with trust authentication on localhost. Every key
+# is optional; the defaults are shown. `user` defaults to the operating-
+# system user, `bin_dir` to the folder of pg_isready on the PATH, and
+# `data_dir` to a folder of the local user profile (used only to start the
+# server when it is down).
+[scorecard]
+host = "localhost"
+port = 5434
+dbname = "paper0"
+# user = ""
+# bin_dir = ""
+# data_dir = ""

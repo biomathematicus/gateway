@@ -1,0 +1,13 @@
+outcome,block_added_in_order,subjects,median_added_r2,median_lo,median_hi,added_r2_weighted_by_first_attempts,weighted_lo,weighted_hi,smallest,largest,subjects_with_positive_increment,subjects_whose_interval_excludes_zero_above
+grade,preparation (scores and credit route),25,0.0563,0.0437,0.0647,0.0541,0.0483,0.0613,0.0142,0.1139,25,25
+grade,family resources,25,0.0027,0.0009,0.0047,0.0038,0.0024,0.0054,-0.0058,0.0068,21,7
+grade,demographics,25,0.0083,0.0060,0.0128,0.0125,0.0102,0.0149,-0.0060,0.0308,24,15
+grade,district poverty,25,0.0004,-0.0008,0.0016,0.0008,-0.0004,0.0019,-0.0040,0.0033,17,0
+grade,school block,25,-0.0015,-0.0033,-0.0000,-0.0005,-0.0017,0.0005,-0.0128,0.0025,7,1
+grade,all blocks,25,0.0860,0.0776,0.1010,0.1026,0.0936,0.1120,0.0222,0.1874,25,
+dfw,preparation (scores and credit route),25,0.0123,0.0088,0.0195,0.0187,0.0161,0.0218,-0.0084,0.0455,23,18
+dfw,family resources,25,0.0005,-0.0003,0.0028,0.0024,0.0013,0.0037,-0.0046,0.0042,15,7
+dfw,demographics,25,0.0031,0.0016,0.0053,0.0059,0.0043,0.0074,-0.0068,0.0186,22,10
+dfw,district poverty,25,-0.0005,-0.0012,0.0007,0.0004,-0.0007,0.0014,-0.0055,0.0062,11,0
+dfw,school block,25,-0.0015,-0.0035,-0.0003,-0.0008,-0.0018,-0.0001,-0.0157,0.0018,4,1
+dfw,all blocks,25,0.0271,0.0227,0.0344,0.0379,0.0333,0.0428,-0.0158,0.0805,23,

@@ -1,0 +1,416 @@
+donor,acceptor,n_students
+University College,Biology,148
+University College,"Kinesiology, Health & Nutrition",395
+University College,Management,307
+University College,Psychology,263
+University College,Marketing,221
+University College,Computer Science,157
+University College,Communication,310
+University College,Mechanical Engineering,242
+University College,Finance,195
+University College,Interdisciplinary Learning & Teaching,205
+University College,Sociology,180
+University College,Accounting,169
+University College,General (COB),42
+University College,Information Systems & Cyber Security,143
+University College,Electrical & Computer Engineering,151
+University College,Criminal Justice,168
+University College,Chemistry,43
+University College,Philosophy and Classics,77
+University College,Civil & Environmental Engineering,95
+University College,Political Science & Geography,114
+University College,General (COE),23
+University College,Mathematics,51
+University College,Environmental Science and Ecology,60
+University College,Biomedical Engineering and Chemical Engineering,30
+University College,English,73
+University College,Architecture,69
+University College,Economics,52
+University College,Construction Science,52
+University College,History,50
+University College,Management Science & Statistics,36
+University College,Art & Art History,40
+University College,Physics & Astronomy,20
+University College,Other,183
+Biology,University College,292
+Biology,"Kinesiology, Health & Nutrition",623
+Biology,Management,72
+Biology,Psychology,342
+Biology,Marketing,58
+Biology,Computer Science,55
+Biology,Communication,65
+Biology,Mechanical Engineering,28
+Biology,Finance,63
+Biology,Interdisciplinary Learning & Teaching,120
+Biology,Sociology,435
+Biology,Accounting,46
+Biology,General (COB),11
+Biology,Information Systems & Cyber Security,55
+Biology,Criminal Justice,61
+Biology,Chemistry,79
+Biology,Philosophy and Classics,352
+Biology,Political Science & Geography,38
+Biology,Mathematics,20
+Biology,Environmental Science and Ecology,74
+Biology,Biomedical Engineering and Chemical Engineering,18
+Biology,English,35
+Biology,Economics,17
+Biology,History,30
+Biology,Management Science & Statistics,17
+Biology,Art & Art History,21
+Biology,Other,107
+"Kinesiology, Health & Nutrition",University College,98
+"Kinesiology, Health & Nutrition",Biology,50
+"Kinesiology, Health & Nutrition",Management,35
+"Kinesiology, Health & Nutrition",Psychology,93
+"Kinesiology, Health & Nutrition",Marketing,35
+"Kinesiology, Health & Nutrition",Computer Science,12
+"Kinesiology, Health & Nutrition",Communication,53
+"Kinesiology, Health & Nutrition",Finance,22
+"Kinesiology, Health & Nutrition",Interdisciplinary Learning & Teaching,102
+"Kinesiology, Health & Nutrition",Sociology,80
+"Kinesiology, Health & Nutrition",Accounting,22
+"Kinesiology, Health & Nutrition",General (COB),10
+"Kinesiology, Health & Nutrition",Information Systems & Cyber Security,15
+"Kinesiology, Health & Nutrition",Criminal Justice,40
+"Kinesiology, Health & Nutrition",Philosophy and Classics,19
+"Kinesiology, Health & Nutrition",Political Science & Geography,14
+"Kinesiology, Health & Nutrition",Mathematics,10
+"Kinesiology, Health & Nutrition",Environmental Science and Ecology,13
+"Kinesiology, Health & Nutrition",English,11
+"Kinesiology, Health & Nutrition",History,23
+"Kinesiology, Health & Nutrition",Other,36
+Management,University College,127
+Management,"Kinesiology, Health & Nutrition",40
+Management,Psychology,32
+Management,Marketing,82
+Management,Computer Science,10
+Management,Communication,102
+Management,Finance,76
+Management,Interdisciplinary Learning & Teaching,24
+Management,Sociology,12
+Management,Accounting,56
+Management,Information Systems & Cyber Security,30
+Management,Criminal Justice,27
+Management,Political Science & Geography,31
+Management,English,10
+Management,Economics,27
+Management,History,12
+Management,Management Science & Statistics,19
+Management,Other,21
+Psychology,University College,42
+Psychology,Biology,12
+Psychology,"Kinesiology, Health & Nutrition",34
+Psychology,Management,19
+Psychology,Marketing,26
+Psychology,Computer Science,12
+Psychology,Communication,34
+Psychology,Finance,12
+Psychology,Interdisciplinary Learning & Teaching,48
+Psychology,Sociology,66
+Psychology,Accounting,12
+Psychology,Criminal Justice,28
+Psychology,Philosophy and Classics,11
+Psychology,Political Science & Geography,10
+Psychology,English,19
+Psychology,History,11
+Psychology,Art & Art History,13
+Psychology,Other,30
+Marketing,University College,103
+Marketing,"Kinesiology, Health & Nutrition",22
+Marketing,Management,63
+Marketing,Psychology,30
+Marketing,Communication,133
+Marketing,Finance,42
+Marketing,Interdisciplinary Learning & Teaching,17
+Marketing,Sociology,14
+Marketing,Accounting,25
+Marketing,Information Systems & Cyber Security,22
+Marketing,Criminal Justice,20
+Marketing,Political Science & Geography,20
+Marketing,Economics,14
+Marketing,Other,21
+Computer Science,University College,59
+Computer Science,Biology,11
+Computer Science,"Kinesiology, Health & Nutrition",25
+Computer Science,Management,27
+Computer Science,Psychology,31
+Computer Science,Marketing,29
+Computer Science,Communication,35
+Computer Science,Finance,13
+Computer Science,Interdisciplinary Learning & Teaching,13
+Computer Science,Accounting,22
+Computer Science,Information Systems & Cyber Security,238
+Computer Science,Electrical & Computer Engineering,21
+Computer Science,Criminal Justice,27
+Computer Science,Political Science & Geography,12
+Computer Science,Mathematics,21
+Computer Science,Environmental Science and Ecology,10
+Computer Science,English,19
+Computer Science,History,15
+Computer Science,Art & Art History,13
+Computer Science,Other,32
+Communication,University College,20
+Communication,Management,10
+Communication,Psychology,10
+Communication,Marketing,13
+Communication,Interdisciplinary Learning & Teaching,17
+Communication,Sociology,12
+Communication,English,12
+Communication,Other,12
+Mechanical Engineering,University College,96
+Mechanical Engineering,Biology,11
+Mechanical Engineering,"Kinesiology, Health & Nutrition",30
+Mechanical Engineering,Management,49
+Mechanical Engineering,Psychology,18
+Mechanical Engineering,Marketing,25
+Mechanical Engineering,Computer Science,60
+Mechanical Engineering,Communication,18
+Mechanical Engineering,Finance,31
+Mechanical Engineering,Interdisciplinary Learning & Teaching,10
+Mechanical Engineering,Accounting,32
+Mechanical Engineering,Information Systems & Cyber Security,38
+Mechanical Engineering,Electrical & Computer Engineering,43
+Mechanical Engineering,Criminal Justice,38
+Mechanical Engineering,Civil & Environmental Engineering,30
+Mechanical Engineering,Mathematics,37
+Mechanical Engineering,Environmental Science and Ecology,20
+Mechanical Engineering,Construction Science,17
+Mechanical Engineering,Management Science & Statistics,15
+Mechanical Engineering,Physics & Astronomy,17
+Mechanical Engineering,Other,17
+Finance,University College,43
+Finance,Management,46
+Finance,Psychology,18
+Finance,Marketing,32
+Finance,Communication,29
+Finance,Accounting,48
+Finance,Information Systems & Cyber Security,22
+Finance,Political Science & Geography,14
+Finance,Economics,21
+Finance,Management Science & Statistics,12
+Finance,Other,11
+Interdisciplinary Learning & Teaching,University College,33
+Interdisciplinary Learning & Teaching,"Kinesiology, Health & Nutrition",16
+Interdisciplinary Learning & Teaching,Management,10
+Interdisciplinary Learning & Teaching,Psychology,26
+Interdisciplinary Learning & Teaching,Marketing,11
+Interdisciplinary Learning & Teaching,Communication,20
+Interdisciplinary Learning & Teaching,Sociology,19
+Interdisciplinary Learning & Teaching,Mathematics,11
+Interdisciplinary Learning & Teaching,English,16
+Interdisciplinary Learning & Teaching,Other,18
+Sociology,"Kinesiology, Health & Nutrition",13
+Sociology,Psychology,14
+Accounting,University College,59
+Accounting,"Kinesiology, Health & Nutrition",14
+Accounting,Management,74
+Accounting,Psychology,10
+Accounting,Marketing,34
+Accounting,Computer Science,13
+Accounting,Communication,15
+Accounting,Finance,50
+Accounting,Interdisciplinary Learning & Teaching,20
+Accounting,Information Systems & Cyber Security,24
+Accounting,Criminal Justice,12
+Accounting,Mathematics,22
+Accounting,Management Science & Statistics,13
+Accounting,Other,11
+General (COB),University College,79
+General (COB),Biology,11
+General (COB),"Kinesiology, Health & Nutrition",25
+General (COB),Management,205
+General (COB),Psychology,30
+General (COB),Marketing,130
+General (COB),Computer Science,12
+General (COB),Communication,63
+General (COB),Finance,100
+General (COB),Interdisciplinary Learning & Teaching,22
+General (COB),Accounting,61
+General (COB),Information Systems & Cyber Security,30
+General (COB),Criminal Justice,33
+General (COB),Political Science & Geography,22
+General (COB),Economics,23
+General (COB),Management Science & Statistics,13
+General (COB),Other,24
+Information Systems & Cyber Security,University College,33
+Information Systems & Cyber Security,"Kinesiology, Health & Nutrition",11
+Information Systems & Cyber Security,Management,22
+Information Systems & Cyber Security,Computer Science,50
+Information Systems & Cyber Security,Communication,18
+Information Systems & Cyber Security,Finance,13
+Information Systems & Cyber Security,Accounting,15
+Information Systems & Cyber Security,Criminal Justice,15
+Information Systems & Cyber Security,Political Science & Geography,10
+Information Systems & Cyber Security,Management Science & Statistics,10
+Electrical & Computer Engineering,University College,44
+Electrical & Computer Engineering,"Kinesiology, Health & Nutrition",16
+Electrical & Computer Engineering,Management,18
+Electrical & Computer Engineering,Psychology,12
+Electrical & Computer Engineering,Marketing,13
+Electrical & Computer Engineering,Computer Science,110
+Electrical & Computer Engineering,Communication,16
+Electrical & Computer Engineering,Mechanical Engineering,21
+Electrical & Computer Engineering,Finance,12
+Electrical & Computer Engineering,Accounting,16
+Electrical & Computer Engineering,Information Systems & Cyber Security,59
+Electrical & Computer Engineering,Criminal Justice,18
+Electrical & Computer Engineering,Civil & Environmental Engineering,12
+Electrical & Computer Engineering,Mathematics,24
+Criminal Justice,University College,24
+Criminal Justice,"Kinesiology, Health & Nutrition",17
+Criminal Justice,Management,13
+Criminal Justice,Psychology,18
+Criminal Justice,Communication,12
+Criminal Justice,Interdisciplinary Learning & Teaching,11
+Criminal Justice,Sociology,15
+Criminal Justice,Information Systems & Cyber Security,14
+Criminal Justice,Political Science & Geography,13
+Criminal Justice,Other,12
+Chemistry,University College,36
+Chemistry,Biology,88
+Chemistry,"Kinesiology, Health & Nutrition",81
+Chemistry,Management,13
+Chemistry,Psychology,43
+Chemistry,Computer Science,21
+Chemistry,Communication,10
+Chemistry,Sociology,59
+Chemistry,Criminal Justice,16
+Chemistry,Philosophy and Classics,28
+Chemistry,Environmental Science and Ecology,17
+Chemistry,Biomedical Engineering and Chemical Engineering,11
+Chemistry,Other,21
+Philosophy and Classics,Biology,11
+Philosophy and Classics,Psychology,20
+Philosophy and Classics,Sociology,11
+Philosophy and Classics,Political Science & Geography,12
+Civil & Environmental Engineering,University College,44
+Civil & Environmental Engineering,"Kinesiology, Health & Nutrition",15
+Civil & Environmental Engineering,Management,17
+Civil & Environmental Engineering,Psychology,12
+Civil & Environmental Engineering,Marketing,12
+Civil & Environmental Engineering,Communication,15
+Civil & Environmental Engineering,Mechanical Engineering,35
+Civil & Environmental Engineering,Finance,16
+Civil & Environmental Engineering,Accounting,22
+Civil & Environmental Engineering,Information Systems & Cyber Security,12
+Civil & Environmental Engineering,Electrical & Computer Engineering,12
+Civil & Environmental Engineering,Mathematics,12
+Civil & Environmental Engineering,Environmental Science and Ecology,11
+Civil & Environmental Engineering,Architecture,12
+Civil & Environmental Engineering,Construction Science,34
+Civil & Environmental Engineering,Other,14
+Political Science & Geography,University College,11
+Political Science & Geography,Psychology,11
+Political Science & Geography,Communication,17
+Political Science & Geography,History,12
+Political Science & Geography,Other,13
+General (COE),University College,24
+General (COE),"Kinesiology, Health & Nutrition",13
+General (COE),Management,16
+General (COE),Marketing,11
+General (COE),Computer Science,24
+General (COE),Mechanical Engineering,103
+General (COE),Finance,17
+General (COE),Accounting,14
+General (COE),Information Systems & Cyber Security,10
+General (COE),Electrical & Computer Engineering,46
+General (COE),Civil & Environmental Engineering,46
+General (COE),Mathematics,16
+General (COE),Biomedical Engineering and Chemical Engineering,20
+General (COE),Other,14
+General (COS),University College,41
+General (COS),Biology,83
+General (COS),"Kinesiology, Health & Nutrition",63
+General (COS),Management,13
+General (COS),Psychology,26
+General (COS),Computer Science,26
+General (COS),Communication,16
+General (COS),Mechanical Engineering,11
+General (COS),Finance,10
+General (COS),Interdisciplinary Learning & Teaching,10
+General (COS),Sociology,16
+General (COS),Chemistry,22
+General (COS),Environmental Science and Ecology,12
+General (COS),Other,23
+Mathematics,University College,18
+Mathematics,"Kinesiology, Health & Nutrition",12
+Mathematics,Computer Science,15
+Mathematics,Interdisciplinary Learning & Teaching,42
+Mathematics,Management Science & Statistics,12
+Environmental Science and Ecology,University College,18
+Environmental Science and Ecology,Biology,10
+Environmental Science and Ecology,Psychology,11
+Environmental Science and Ecology,Interdisciplinary Learning & Teaching,10
+Environmental Science and Ecology,Political Science & Geography,11
+Environmental Science and Ecology,Other,18
+Biomedical Engineering and Chemical Engineering,University College,14
+Biomedical Engineering and Chemical Engineering,Biology,47
+Biomedical Engineering and Chemical Engineering,"Kinesiology, Health & Nutrition",16
+Biomedical Engineering and Chemical Engineering,Computer Science,15
+Biomedical Engineering and Chemical Engineering,Mechanical Engineering,45
+Biomedical Engineering and Chemical Engineering,Sociology,15
+Biomedical Engineering and Chemical Engineering,Information Systems & Cyber Security,13
+Biomedical Engineering and Chemical Engineering,Electrical & Computer Engineering,25
+Biomedical Engineering and Chemical Engineering,Philosophy and Classics,14
+Biomedical Engineering and Chemical Engineering,Civil & Environmental Engineering,11
+Biomedical Engineering and Chemical Engineering,Environmental Science and Ecology,10
+Biomedical Engineering and Chemical Engineering,Other,10
+English,Psychology,12
+English,Communication,14
+English,Interdisciplinary Learning & Teaching,12
+English,Other,14
+Architecture,University College,14
+Architecture,"Kinesiology, Health & Nutrition",11
+Architecture,Management,12
+Architecture,Marketing,10
+Architecture,Communication,12
+Architecture,Finance,14
+Architecture,Civil & Environmental Engineering,14
+Architecture,Construction Science,43
+Architecture,Other,20
+General (COLFA),University College,23
+General (COLFA),Biology,16
+General (COLFA),"Kinesiology, Health & Nutrition",14
+General (COLFA),Management,14
+General (COLFA),Psychology,27
+General (COLFA),Marketing,21
+General (COLFA),Communication,44
+General (COLFA),Interdisciplinary Learning & Teaching,10
+General (COLFA),Accounting,14
+General (COLFA),Political Science & Geography,15
+General (COLFA),English,18
+General (COLFA),Other,23
+Economics,University College,14
+Economics,Management,14
+Economics,Finance,19
+Economics,Accounting,12
+Management Science & Statistics,Finance,13
+Art & Art History,Communication,10
+Physics & Astronomy,Computer Science,11
+Physics & Astronomy,Mechanical Engineering,11
+Physics & Astronomy,Mathematics,14
+Physics & Astronomy,Other,12
+Other,University College,45
+Other,Biology,16
+Other,"Kinesiology, Health & Nutrition",49
+Other,Management,27
+Other,Psychology,37
+Other,Marketing,13
+Other,Computer Science,15
+Other,Communication,32
+Other,Interdisciplinary Learning & Teaching,133
+Other,Sociology,17
+Other,Accounting,15
+Other,Information Systems & Cyber Security,11
+Other,Criminal Justice,21
+Other,Philosophy and Classics,11
+Other,Political Science & Geography,20
+Other,Mathematics,13
+Other,Environmental Science and Ecology,10
+Other,English,14
+Other,Architecture,42
+Other,Construction Science,30
+Other,History,16
+Other,Art & Art History,12
+Other,Other,40

@@ -1,0 +1,128 @@
+{
+ "mode": "post-registration corrections (plan Section 17, D2)",
+ "first_cohort": 2014,
+ "seed": 20261118,
+ "subject_correlation": {
+  "grade math": {
+   "mean_off_diagonal": 0.08072476737657354,
+   "largest": 0.47163941977517404,
+   "smallest": -0.16416081905437002
+  },
+  "grade verbal": {
+   "mean_off_diagonal": 0.06401923718556464,
+   "largest": 0.39245362082480667,
+   "smallest": -0.22350676800589994
+  },
+  "grade math_minus_verbal": {
+   "mean_off_diagonal": 0.06328042438356349,
+   "largest": 0.39210828954183075,
+   "smallest": -0.1547578924859787
+  },
+  "dfw math": {
+   "mean_off_diagonal": 0.05670282726593991,
+   "largest": 0.4293735459167934,
+   "smallest": -0.19161180344078765
+  },
+  "dfw verbal": {
+   "mean_off_diagonal": 0.04713423545768863,
+   "largest": 0.39323282737792636,
+   "smallest": -0.1807856189912556
+  },
+  "dfw math_minus_verbal": {
+   "mean_off_diagonal": 0.04809657751507623,
+   "largest": 0.41957197693046844,
+   "smallest": -0.14524268637858198
+  }
+ },
+ "H2": {
+  "pooled": 0.14009051791753527,
+  "lo_joint": 0.10918732161938383,
+  "hi_joint": 0.1709937142156867,
+  "lo_independent": 0.1114960751302615,
+  "hi_independent": 0.16868496070480904,
+  "subjects": 18,
+  "subjects_passing_fdr_positive": 17,
+  "supported": true
+ },
+ "seconds": 23,
+ "block_bootstrap": {
+  "draws": 2000,
+  "schools": 842,
+  "note": "sending schools resampled jointly across subjects; predictions held fixed"
+ },
+ "forest_against_linear": {
+  "within offering, schools held out, grade": {
+   "largest_forest_minus_linear": 0.008899999999999998,
+   "median_forest_minus_linear": -0.0029,
+   "subjects_above_0.02": 0,
+   "subjects": 25
+  },
+  "within offering, schools held out, dfw": {
+   "largest_forest_minus_linear": 0.02219999999999999,
+   "median_forest_minus_linear": 0.0016000000000000042,
+   "subjects_above_0.02": 1,
+   "subjects": 25
+  },
+  "later cohorts from earlier cohorts, grade": {
+   "largest_forest_minus_linear": 0.0713,
+   "median_forest_minus_linear": 0.005199999999999982,
+   "subjects_above_0.02": 6,
+   "subjects": 25
+  },
+  "later cohorts from earlier cohorts, dfw": {
+   "largest_forest_minus_linear": 0.2087,
+   "median_forest_minus_linear": 0.014199999999999999,
+   "subjects_above_0.02": 11,
+   "subjects": 25
+  }
+ },
+ "no_aid": {
+  "score_sd_points": 71.34861347441566,
+  "preparation": {
+   "mathematics score": {
+    "advmath_index": {
+     "with_aid_variables": {
+      "coef": 0.1364189781827475,
+      "se": 0.018157429158324804
+     },
+     "without_aid_variables": {
+      "coef": 0.137834399291266,
+      "se": 0.018647634195890748
+     }
+    },
+    "district_poverty": {
+     "with_aid_variables": {
+      "coef": -0.14636062280218876,
+      "se": 0.014217858070562858
+     },
+     "without_aid_variables": {
+      "coef": -0.16048451308586553,
+      "se": 0.014405121731989748
+     }
+    }
+   },
+   "mathematics minus verbal": {
+    "advmath_index": {
+     "with_aid_variables": {
+      "coef": 0.026869139883842402,
+      "se": 0.009765507174451488
+     },
+     "without_aid_variables": {
+      "coef": 0.02676870149417885,
+      "se": 0.009798561984264417
+     }
+    },
+    "district_poverty": {
+     "with_aid_variables": {
+      "coef": -0.002939601621917665,
+      "se": 0.009730064094282814
+     },
+     "without_aid_variables": {
+      "coef": -0.00047753490241478347,
+      "se": 0.00974679512291834
+     }
+    }
+   }
+  }
+ }
+}

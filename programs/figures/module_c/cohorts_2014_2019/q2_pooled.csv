@@ -1,0 +1,25 @@
+outcome,classification,class,contrast,subjects,pooled,lo,hi,subjects_passing_fdr_expected_sign
+grade,registered classes,other,math,18,0.1401,0.1115,0.1687,17
+grade,registered classes,other,verbal,18,0.1124,0.0705,0.1544,13
+grade,registered classes,other,math_minus_verbal,18,0.0267,-0.0109,0.0643,2
+grade,registered classes,quantitative,math,7,0.2625,0.1998,0.3253,7
+grade,registered classes,quantitative,verbal,7,0.0648,0.0019,0.1277,4
+grade,registered classes,quantitative,math_minus_verbal,7,0.1967,0.0769,0.3164,4
+grade,broad quantitative class,other,math,14,0.1268,0.1006,0.1529,13
+grade,broad quantitative class,other,verbal,14,0.1059,0.0560,0.1559,10
+grade,broad quantitative class,other,math_minus_verbal,14,0.0215,-0.0249,0.0680,2
+grade,broad quantitative class,quantitative,math,11,0.2313,0.1777,0.2849,11
+grade,broad quantitative class,quantitative,verbal,11,0.0906,0.0357,0.1455,7
+grade,broad quantitative class,quantitative,math_minus_verbal,11,0.1409,0.0427,0.2391,4
+dfw,registered classes,other,math,18,-0.0222,-0.0291,-0.0153,10
+dfw,registered classes,other,verbal,18,-0.0161,-0.0286,-0.0037,2
+dfw,registered classes,other,math_minus_verbal,18,-0.0067,-0.0170,0.0036,1
+dfw,registered classes,quantitative,math,7,-0.0509,-0.0770,-0.0248,5
+dfw,registered classes,quantitative,verbal,7,-0.0091,-0.0269,0.0086,1
+dfw,registered classes,quantitative,math_minus_verbal,7,-0.0415,-0.0825,-0.0004,0
+dfw,broad quantitative class,other,math,14,-0.0207,-0.0279,-0.0135,8
+dfw,broad quantitative class,other,verbal,14,-0.0135,-0.0281,0.0010,2
+dfw,broad quantitative class,other,math_minus_verbal,14,-0.0079,-0.0205,0.0047,1
+dfw,broad quantitative class,quantitative,math,11,-0.0420,-0.0626,-0.0215,7
+dfw,broad quantitative class,quantitative,verbal,11,-0.0150,-0.0300,0.0000,1
+dfw,broad quantitative class,quantitative,math_minus_verbal,11,-0.0269,-0.0593,0.0055,0

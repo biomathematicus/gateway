@@ -1,0 +1,9 @@
+outcome,contrast,instructor_clusters,rows,shuffles,cluster_t_reject_05,wild_reject_05,cluster_t_reject_10,wild_reject_10
+grade,"cap scenario, lowest third",73,24666,200,0.0800,0.0650,0.1450,0.1150
+grade,"cap scenario, highest third",73,24666,200,0.0450,0.0350,0.1300,0.0800
+grade,size slope at entry score -1 SD,73,24666,200,0.0800,0.0650,0.1400,0.1150
+grade,size-by-score interaction,73,24666,200,0.0800,0.0600,0.1350,0.1150
+dfw,"cap scenario, lowest third",74,27576,200,0.0700,0.0400,0.1250,0.0850
+dfw,"cap scenario, highest third",74,27576,200,0.0900,0.0450,0.1600,0.1250
+dfw,size slope at entry score -1 SD,74,27576,200,0.0700,0.0550,0.1200,0.0800
+dfw,size-by-score interaction,74,27576,200,0.0950,0.0750,0.1250,0.1150

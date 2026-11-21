@@ -1,0 +1,19 @@
+{
+ "files": 378,
+ "files_with_recorded_hash_on_disk": 378,
+ "files_not_under_the_raw_data_folder": 1,
+ "manifest_archives": 6,
+ "files_by_dataset": {
+  "crdc": 4,
+  "crdc_alg2": 5,
+  "crdc_courses": 31,
+  "edge_geocode": 2,
+  "edge_grf_lea_tract": 1,
+  "saipe_sd": 328,
+  "zcta_tract_rel": 1,
+  "opportunity_atlas": 2,
+  "ccd_school_universe": 2,
+  "census_gazetteer_zcta": 1,
+  "college_scorecard": 1
+ }
+}

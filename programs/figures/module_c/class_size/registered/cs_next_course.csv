@@ -1,0 +1,8 @@
+model,term,estimate,se,p_cluster_t,p_wild_bootstrap,half_width,interval_from,rows,students,instructor_clusters
+continuation: course-term effects,log2_size,-0.0295,0.0086,0.0010,0.0040,0.0199,wild bootstrap,19269,19261,68
+continuation: course-term and instructor effects,log2_size,-0.0312,0.0094,0.0015,0.0160,0.0240,wild bootstrap,19269,19261,68
+next grade: total,log2_size,-0.0123,0.0286,0.6674,0.7120,0.0655,wild bootstrap,6510,6509,67
+next grade: given the origin grade,log2_size,0.0268,0.0407,0.5130,0.5610,0.1042,wild bootstrap,6510,6509,67
+next grade: given the origin grade,origin_grade,0.5579,0.0240,0.0000,,0.0478,cluster t,6510,6509,67
+next grade: given the origin grade and instructor effects,log2_size,0.0226,0.0345,0.5159,,0.0689,cluster t,6510,6509,67
+next grade: given the origin grade and instructor effects,origin_grade,0.6346,0.0182,0.0000,,0.0363,cluster t,6510,6509,67

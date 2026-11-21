@@ -1,0 +1,7 @@
+outcome,term,estimate,se,p_cluster_t,cluster_t_half_width,rows,students,instructor_clusters
+grade,log2_size,-0.0078,0.0118,0.5092,0.0231,168552,23357,758
+grade,log2_size_MAT,-0.0258,0.0406,0.5243,0.0796,168552,23357,758
+grade,log2_size_other,-0.0045,0.0122,0.7107,0.0239,168552,23357,758
+dfw,log2_size,0.0001,0.0031,0.9713,0.0060,177046,23692,760
+dfw,log2_size_MAT,0.0062,0.0118,0.6014,0.0231,177046,23692,760
+dfw,log2_size_other,-0.0010,0.0030,0.7364,0.0059,177046,23692,760

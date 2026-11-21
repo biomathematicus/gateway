@@ -1,0 +1,20 @@
+{
+ "cohort_n": 10027,
+ "entry_terms": {
+  "fall_2014": 4935,
+  "spring_2015": 112,
+  "summer_2015": 57,
+  "fall_2015": 4923
+ },
+ "cap_set": {
+  "students": 1190,
+  "reached_senior_level": 291,
+  "share": 0.2445378151260504
+ },
+ "cap_not_set": {
+  "students": 8837,
+  "reached_senior_level": 4771,
+  "share": 0.5398891026366414,
+  "mat_odds_ratio_not_reaching": 1.415477688328535
+ }
+}

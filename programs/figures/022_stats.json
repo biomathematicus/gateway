@@ -1,0 +1,267 @@
+{
+ "n_school_cycles": 112975,
+ "pairwise_all": [
+  {
+   "cycle_a": "2011-12",
+   "cycle_b": "2013-14",
+   "gap_years": 2,
+   "n_schools": 18941,
+   "spearman_count": 0.859,
+   "pearson_log": 0.791,
+   "pct_agree_offers_UNINFORMATIVE": 93.7,
+   "kappa": 0.046
+  },
+  {
+   "cycle_a": "2011-12",
+   "cycle_b": "2015-16",
+   "gap_years": 4,
+   "n_schools": 18574,
+   "spearman_count": 0.846,
+   "pearson_log": 0.769,
+   "pct_agree_offers_UNINFORMATIVE": 93.2,
+   "kappa": 0.013
+  },
+  {
+   "cycle_a": "2011-12",
+   "cycle_b": "2017-18",
+   "gap_years": 6,
+   "n_schools": 18123,
+   "spearman_count": 0.84,
+   "pearson_log": 0.757,
+   "pct_agree_offers_UNINFORMATIVE": 93.2,
+   "kappa": 0.003
+  },
+  {
+   "cycle_a": "2011-12",
+   "cycle_b": "2021-22",
+   "gap_years": 10,
+   "n_schools": 17809,
+   "spearman_count": 0.825,
+   "pearson_log": 0.735,
+   "pct_agree_offers_UNINFORMATIVE": 92.9,
+   "kappa": 0.004
+  },
+  {
+   "cycle_a": "2013-14",
+   "cycle_b": "2015-16",
+   "gap_years": 2,
+   "n_schools": 18198,
+   "spearman_count": 0.906,
+   "pearson_log": 0.888,
+   "pct_agree_offers_UNINFORMATIVE": 99.9,
+   "kappa": 0.0
+  },
+  {
+   "cycle_a": "2013-14",
+   "cycle_b": "2017-18",
+   "gap_years": 4,
+   "n_schools": 17630,
+   "spearman_count": 0.893,
+   "pearson_log": 0.871,
+   "pct_agree_offers_UNINFORMATIVE": 99.9,
+   "kappa": -0.0
+  },
+  {
+   "cycle_a": "2013-14",
+   "cycle_b": "2021-22",
+   "gap_years": 8,
+   "n_schools": 17172,
+   "spearman_count": 0.878,
+   "pearson_log": 0.852,
+   "pct_agree_offers_UNINFORMATIVE": 99.9,
+   "kappa": -0.0
+  },
+  {
+   "cycle_a": "2015-16",
+   "cycle_b": "2017-18",
+   "gap_years": 2,
+   "n_schools": 18899,
+   "spearman_count": 0.921,
+   "pearson_log": 0.906,
+   "pct_agree_offers_UNINFORMATIVE": 100.0,
+   "kappa": 0.0
+  },
+  {
+   "cycle_a": "2015-16",
+   "cycle_b": "2021-22",
+   "gap_years": 6,
+   "n_schools": 18124,
+   "spearman_count": 0.9,
+   "pearson_log": 0.877,
+   "pct_agree_offers_UNINFORMATIVE": 100.0,
+   "kappa": -0.0
+  },
+  {
+   "cycle_a": "2017-18",
+   "cycle_b": "2021-22",
+   "gap_years": 4,
+   "n_schools": 18941,
+   "spearman_count": 0.91,
+   "pearson_log": 0.888,
+   "pct_agree_offers_UNINFORMATIVE": 100.0,
+   "kappa": 0.0
+  }
+ ],
+ "pairwise_utsa": [
+  {
+   "cycle_a": "2011-12",
+   "cycle_b": "2013-14",
+   "gap_years": 2,
+   "n_schools": 1090,
+   "spearman_count": 0.918,
+   "pearson_log": 0.851,
+   "pct_agree_offers_UNINFORMATIVE": 98.5,
+   "kappa": -0.002
+  },
+  {
+   "cycle_a": "2011-12",
+   "cycle_b": "2015-16",
+   "gap_years": 4,
+   "n_schools": 1102,
+   "spearman_count": 0.929,
+   "pearson_log": 0.855,
+   "pct_agree_offers_UNINFORMATIVE": 98.5,
+   "kappa": 0.0
+  },
+  {
+   "cycle_a": "2011-12",
+   "cycle_b": "2017-18",
+   "gap_years": 6,
+   "n_schools": 1102,
+   "spearman_count": 0.924,
+   "pearson_log": 0.851,
+   "pct_agree_offers_UNINFORMATIVE": 98.5,
+   "kappa": 0.0
+  },
+  {
+   "cycle_a": "2011-12",
+   "cycle_b": "2021-22",
+   "gap_years": 10,
+   "n_schools": 1096,
+   "spearman_count": 0.913,
+   "pearson_log": 0.844,
+   "pct_agree_offers_UNINFORMATIVE": 98.5,
+   "kappa": 0.0
+  },
+  {
+   "cycle_a": "2013-14",
+   "cycle_b": "2015-16",
+   "gap_years": 2,
+   "n_schools": 1133,
+   "spearman_count": 0.931,
+   "pearson_log": 0.917,
+   "pct_agree_offers_UNINFORMATIVE": 99.9,
+   "kappa": 0.0
+  },
+  {
+   "cycle_a": "2013-14",
+   "cycle_b": "2017-18",
+   "gap_years": 4,
+   "n_schools": 1131,
+   "spearman_count": 0.929,
+   "pearson_log": 0.918,
+   "pct_agree_offers_UNINFORMATIVE": 100.0,
+   "kappa": NaN
+  },
+  {
+   "cycle_a": "2013-14",
+   "cycle_b": "2021-22",
+   "gap_years": 8,
+   "n_schools": 1122,
+   "spearman_count": 0.911,
+   "pearson_log": 0.898,
+   "pct_agree_offers_UNINFORMATIVE": 100.0,
+   "kappa": NaN
+  },
+  {
+   "cycle_a": "2015-16",
+   "cycle_b": "2017-18",
+   "gap_years": 2,
+   "n_schools": 1179,
+   "spearman_count": 0.945,
+   "pearson_log": 0.929,
+   "pct_agree_offers_UNINFORMATIVE": 100.0,
+   "kappa": NaN
+  },
+  {
+   "cycle_a": "2015-16",
+   "cycle_b": "2021-22",
+   "gap_years": 6,
+   "n_schools": 1171,
+   "spearman_count": 0.93,
+   "pearson_log": 0.905,
+   "pct_agree_offers_UNINFORMATIVE": 100.0,
+   "kappa": NaN
+  },
+  {
+   "cycle_a": "2017-18",
+   "cycle_b": "2021-22",
+   "gap_years": 4,
+   "n_schools": 1187,
+   "spearman_count": 0.949,
+   "pearson_log": 0.939,
+   "pct_agree_offers_UNINFORMATIVE": 100.0,
+   "kappa": NaN
+  }
+ ],
+ "zero_rate_by_cycle": [
+  {
+   "cycle": "2011-12",
+   "n": 28150,
+   "pct_zero": 26.25
+  },
+  {
+   "cycle": "2013-14",
+   "n": 20386,
+   "pct_zero": 0.41
+  },
+  {
+   "cycle": "2015-16",
+   "n": 20910,
+   "pct_zero": 0.24
+  },
+  {
+   "cycle": "2017-18",
+   "n": 21242,
+   "pct_zero": 0.01
+  },
+  {
+   "cycle": "2021-22",
+   "n": 22287,
+   "pct_zero": 0.04
+  }
+ ],
+ "decade_spearman": 0.825,
+ "decade_pearson_log": 0.735,
+ "min_spearman_utsa": 0.911,
+ "max_spearman_utsa": 0.949,
+ "quartile_2011_2021": {
+  "Q1": {
+   "Q1": 77.5,
+   "Q2": 19.1,
+   "Q3": 2.8000000000000003,
+   "Q4": 0.7000000000000001
+  },
+  "Q2": {
+   "Q1": 18.2,
+   "Q2": 60.6,
+   "Q3": 19.1,
+   "Q4": 2.1
+  },
+  "Q3": {
+   "Q1": 3.0,
+   "Q2": 18.0,
+   "Q3": 60.5,
+   "Q4": 18.5
+  },
+  "Q4": {
+   "Q1": 1.3,
+   "Q2": 2.4,
+   "Q3": 17.599999999999998,
+   "Q4": 78.7
+  }
+ },
+ "figures": [
+  "../figures/022_provision_stability.png"
+ ]
+}

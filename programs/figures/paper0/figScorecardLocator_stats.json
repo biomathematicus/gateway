@@ -1,0 +1,18 @@
+{
+ "2019_20": {
+  "n_institutions": 1869,
+  "utsa_ugds": 27573,
+  "utsa_c150_4": 0.423,
+  "utsa_pctpell": 0.44,
+  "lowess_expectation": 0.478,
+  "residual": -0.055
+ },
+ "2024_25": {
+  "n_institutions": 1814,
+  "utsa_ugds": 30580,
+  "utsa_c150_4": 0.526,
+  "utsa_pctpell": 0.441,
+  "lowess_expectation": 0.462,
+  "residual": 0.064
+ }
+}

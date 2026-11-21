@@ -1,0 +1,75 @@
+{
+ "entry_window": [
+  "2014.66",
+  "2015.66"
+ ],
+ "horizon_years": 4.0,
+ "declared_boundary": "inclusive (CURRENTTERM <= ft + horizon)",
+ "cohort_n": 10027,
+ "reached_above_4000": {
+  "inclusive": {
+   "n": 5062,
+   "pct": 50.48
+  },
+  "strict": {
+   "n": 4755,
+   "pct": 47.42
+  }
+ },
+ "odds_ratios": {
+  "mat": {
+   "inclusive": {
+    "a": 4595,
+    "b": 4531,
+    "c": 370,
+    "d": 531,
+    "odds_ratio": 1.455
+   },
+   "strict": {
+    "a": 4894,
+    "b": 4232,
+    "c": 378,
+    "d": 523,
+    "odds_ratio": 1.6
+   }
+  },
+  "wrc": {
+   "inclusive": {
+    "a": 3668,
+    "b": 3390,
+    "c": 1297,
+    "d": 1672,
+    "odds_ratio": 1.395
+   },
+   "strict": {
+    "a": 3904,
+    "b": 3152,
+    "c": 1368,
+    "d": 1603,
+    "odds_ratio": 1.451
+   }
+  },
+  "ais": {
+   "inclusive": {
+    "a": 4375,
+    "b": 4908,
+    "c": 590,
+    "d": 154,
+    "odds_ratio": 0.233
+   },
+   "strict": {
+    "a": 4677,
+    "b": 4605,
+    "c": 595,
+    "d": 150,
+    "odds_ratio": 0.256
+   }
+  }
+ },
+ "min_cell": 10,
+ "outcome_band": {
+  "students_touching_exactly_4000": null,
+  "students_touching_5000_plus_in_window": 67,
+  "students_with_pre_entry_records": 34
+ }
+}

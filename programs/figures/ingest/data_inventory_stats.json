@@ -1,0 +1,457 @@
+{
+ "program": "ingest/data_inventory.py",
+ "parameters": {
+  "cycles": [
+   "2011-12",
+   "2013-14",
+   "2015-16",
+   "2017-18",
+   "2021-22"
+  ],
+  "earliest_cycle": "2011-12",
+  "damaged_key_cycle": "2015-16",
+  "primary_cycle": "2017-18",
+  "skip_code": -9,
+  "min_children": 200,
+  "ratio_limit": 1.0,
+  "core_courses": [
+   "alg1_g0910",
+   "alg1_g1112",
+   "geometry",
+   "alg2",
+   "adv_math",
+   "calculus",
+   "biology",
+   "chemistry",
+   "physics"
+  ]
+ },
+ "tables": {
+  "saipe_district_year": {
+   "table": "stg.saipe_sd",
+   "unit": "district by vintage",
+   "n_rows": 382099,
+   "n_vintages": 28,
+   "first_vintage": 1995,
+   "last_vintage": 2024
+  },
+  "crdc_school_cycle": {
+   "table": "stg.crdc_alg2_panel",
+   "unit": "school by cycle",
+   "n_rows": 481347,
+   "n_cycles": 5,
+   "cycles": [
+    "2011-12",
+    "2013-14",
+    "2015-16",
+    "2017-18",
+    "2021-22"
+   ]
+  },
+  "crdc_district_cycle": {
+   "table": "core.crdc_district_panel",
+   "unit": "district by cycle",
+   "n_rows": 84361
+  },
+  "crdc_course_school": {
+   "table": "stg.crdc_course_school",
+   "unit": "school by cycle by course family",
+   "n_rows": 5030159,
+   "by_cycle": {
+    "2013-14": {
+     "n_rows": 666029,
+     "n_schools": 95147,
+     "n_course_families": 7
+    },
+    "2015-16": {
+     "n_rows": 1437525,
+     "n_schools": 95835,
+     "n_course_families": 15
+    },
+    "2017-18": {
+     "n_rows": 1456830,
+     "n_schools": 97122,
+     "n_course_families": 15
+    },
+    "2021-22": {
+     "n_rows": 1469775,
+     "n_schools": 97985,
+     "n_course_families": 15
+    }
+   }
+  },
+  "edge_school_cycle": {
+   "table": "raw_xwalk.edge_school",
+   "unit": "school by cycle",
+   "n_rows": 204467,
+   "by_cycle": {
+    "2017-18": 102337,
+    "2021-22": 102130
+   }
+  },
+  "opportunity_atlas_tract": {
+   "table": "context_tract.oa_tract",
+   "unit": "census tract",
+   "n_rows": 74123,
+   "tract_vintages": [
+    "2010"
+   ]
+  },
+  "opportunity_atlas_zcta": {
+   "table": "context_zcta.oa_zcta",
+   "unit": "ZCTA",
+   "n_rows": 28744,
+   "tract_vintages": [
+    "2010"
+   ]
+  },
+  "zcta_tract_weights": {
+   "table": "raw_xwalk.zcta_tract_frac",
+   "unit": "ZCTA by tract",
+   "n_rows": 125330,
+   "n_zctas": 28863,
+   "n_tracts": 59809
+  },
+  "district_tract_shares": {
+   "table": "raw_xwalk.lea_tract_frac",
+   "unit": "district by tract",
+   "n_rows": 112698,
+   "n_districts": 13331,
+   "n_tracts": 73757
+  }
+ },
+ "crdc_alg2_by_cycle": {
+  "2011-12": {
+   "n_schools": 95258,
+   "n_districts": 16186,
+   "n_schools_alg2_count": 28150,
+   "n_schools_alg2_zero": 7390,
+   "alg2_enrollees": 2920217,
+   "n_schools_skip_code": 0,
+   "n_cells_skip_code": 0,
+   "n_schools_other_code": 0,
+   "n_schools_blank": 67108,
+   "pct_schools_alg2_count": 29.551323773331372,
+   "alg2_count_schools_per_district": 1.7391572964290127,
+   "loader_flag_is_universe": true,
+   "saipe_vintage": 2011,
+   "dim_year_note": "CRDC universe from this cycle"
+  },
+  "2013-14": {
+   "n_schools": 95147,
+   "n_districts": 16451,
+   "n_schools_alg2_count": 20386,
+   "n_schools_alg2_zero": 84,
+   "alg2_enrollees": 2870960,
+   "n_schools_skip_code": 74756,
+   "n_cells_skip_code": 149512,
+   "n_schools_other_code": 8,
+   "n_schools_blank": 0,
+   "pct_schools_alg2_count": 21.425793771742672,
+   "alg2_count_schools_per_district": 1.2391951857029968,
+   "loader_flag_is_universe": true,
+   "saipe_vintage": 2013,
+   "dim_year_note": "TX HB5 signed 2013; Foundation default for students ENTERING HS 2014-15"
+  },
+  "2015-16": {
+   "n_schools": 95835,
+   "n_districts": 16873,
+   "n_schools_alg2_count": 20910,
+   "n_schools_alg2_zero": 51,
+   "alg2_enrollees": 2931194,
+   "n_schools_skip_code": 74922,
+   "n_cells_skip_code": 149844,
+   "n_schools_other_code": 3,
+   "n_schools_blank": 0,
+   "pct_schools_alg2_count": 21.818750978243855,
+   "alg2_count_schools_per_district": 1.2392579861316897,
+   "loader_flag_is_universe": true,
+   "saipe_vintage": 2015,
+   "dim_year_note": null
+  },
+  "2017-18": {
+   "n_schools": 97122,
+   "n_districts": 17152,
+   "n_schools_alg2_count": 21242,
+   "n_schools_alg2_zero": 3,
+   "alg2_enrollees": 2980241,
+   "n_schools_skip_code": 75873,
+   "n_cells_skip_code": 151746,
+   "n_schools_other_code": 7,
+   "n_schools_blank": 0,
+   "pct_schools_alg2_count": 21.871460637136796,
+   "alg2_count_schools_per_district": 1.2384561567164178,
+   "loader_flag_is_universe": true,
+   "saipe_vintage": 2017,
+   "dim_year_note": "held locally"
+  },
+  "2021-22": {
+   "n_schools": 97985,
+   "n_districts": 17699,
+   "n_schools_alg2_count": 22287,
+   "n_schools_alg2_zero": 8,
+   "alg2_enrollees": 3116299,
+   "n_schools_skip_code": 75692,
+   "n_cells_skip_code": 151384,
+   "n_schools_other_code": 6,
+   "n_schools_blank": 0,
+   "pct_schools_alg2_count": 22.745318160943,
+   "alg2_count_schools_per_district": 1.2592236849539522,
+   "loader_flag_is_universe": true,
+   "saipe_vintage": 2021,
+   "dim_year_note": "held locally; pandemic year"
+  }
+ },
+ "reporting_rate": {
+  "definition": "schools with an Algebra II count divided by the districts of the cycle",
+  "earliest_cycle": "2011-12",
+  "later_cycles": [
+   "2013-14",
+   "2015-16",
+   "2017-18",
+   "2021-22"
+  ],
+  "rate_earliest": 1.7391572964290127,
+  "rate_later_mean": 1.2440332533762641,
+  "rate_later_min": 1.2384561567164178,
+  "rate_later_max": 1.2592236849539522,
+  "pct_excess_over_later_mean": 39.79990419942543,
+  "pct_excess_smallest": 38.11345174091216,
+  "pct_excess_largest": 40.42946025962917
+ },
+ "alg2_skip_code": {
+  "code": -9,
+  "cycles_with_reserve_codes": [
+   "2013-14",
+   "2015-16",
+   "2017-18",
+   "2021-22"
+  ],
+  "n_schools_mean": 75310.75,
+  "rounding_unit": 1000,
+  "n_schools_mean_rounded": 75000,
+  "n_schools_min": 74756,
+  "n_schools_max": 75873,
+  "n_cells_mean": 150621.5,
+  "pct_schools_alg2_count_mean": 21.96533088701658,
+  "pct_schools_alg2_count_min": 21.425793771742672,
+  "pct_schools_alg2_count_max": 22.745318160943
+ },
+ "universe_flag": {
+  "cycles_flagged_sample_by_loader": [],
+  "cycles_flagged_universe_by_loader": [
+   "2011-12",
+   "2013-14",
+   "2015-16",
+   "2017-18",
+   "2021-22"
+  ],
+  "reference_cycle": "2011-12",
+  "n_schools": {
+   "2011-12": 95258,
+   "2013-14": 95147,
+   "2015-16": 95835,
+   "2017-18": 97122,
+   "2021-22": 97985
+  },
+  "n_districts": {
+   "2011-12": 16186,
+   "2013-14": 16451,
+   "2015-16": 16873,
+   "2017-18": 17152,
+   "2021-22": 17699
+  },
+  "pct_of_reference_schools": {},
+  "pct_of_reference_districts": {},
+  "dim_year_note": {
+   "2011-12": "CRDC universe from this cycle",
+   "2013-14": "TX HB5 signed 2013; Foundation default for students ENTERING HS 2014-15",
+   "2015-16": null,
+   "2017-18": "held locally",
+   "2021-22": "held locally; pandemic year"
+  }
+ },
+ "alg2_count_schools": {
+  "cycle": "2017-18",
+  "definition": "schools whose Algebra II enrollment is a count (non-negative)",
+  "all_schools": {
+   "table": "stg.crdc_school",
+   "n_schools": 97632,
+   "n_schools_alg2_count": 21419
+  },
+  "numeric_district_id": {
+   "table": "stg.crdc_alg2_panel, stg.crdc_course_school",
+   "n_schools": 97122,
+   "n_districts": 17152,
+   "n_schools_alg2_count": 21242,
+   "n_schools_alg2_skip_code": 75873
+  },
+  "other_district_id": {
+   "n_schools": 510,
+   "n_districts": 452,
+   "n_schools_alg2_count": 177
+  }
+ },
+ "frame_mismatch": {
+  "cycle": "2017-18",
+  "min_children": 200,
+  "n_districts": 10425,
+  "ratio_above_one": {
+   "n_districts": 7,
+   "children": [
+    3,
+    13,
+    29,
+    35,
+    35,
+    103,
+    135
+   ],
+   "median_children": 35,
+   "max_children": 135,
+   "max_ratio": 31.333333333333332,
+   "n_below_min_children": 7
+  },
+  "n_districts_below_min_children": 630,
+  "fits": {
+   "all_districts": {
+    "n_districts": 10425,
+    "max_ratio": 31.333333333333332,
+    "slope_unweighted": 0.030179026002433027,
+    "slope_weighted": -0.052126596131983685
+   },
+   "without_ratio_above_one": {
+    "n_districts": 10418,
+    "max_ratio": 1.0,
+    "slope_unweighted": -0.03745654409021287,
+    "slope_weighted": -0.052252358655573296
+   },
+   "at_least_min_children": {
+    "n_districts": 9795,
+    "max_ratio": 0.6810717372515125,
+    "slope_unweighted": -0.04937201032760827,
+    "slope_weighted": -0.05244552388321644
+   }
+  }
+ },
+ "course_frames": {
+  "2015-16": {
+   "n_course_families": 15,
+   "districts_serving_high_school_grades": {
+    "n_districts": 10030,
+    "children": 50807869
+   },
+   "alg2_frame": {
+    "n_districts": 9793,
+    "children": 50039736
+   },
+   "alg2_frame_incomplete_total": {
+    "n_districts": 3,
+    "children": 149259
+   },
+   "common_frame": {
+    "n_districts": 9790,
+    "children": 49890477
+   },
+   "neutral_frame": {
+    "n_districts": 9961,
+    "children": 50487824
+   },
+   "no_core_enrollment": {
+    "n_districts": 66,
+    "children": 170786,
+    "n_with_incomplete_total": 1
+   },
+   "no_alg2_other_core": {
+    "n_districts": 171,
+    "children": 597347,
+    "complete_totals": {
+     "n_districts": 171,
+     "children": 597347
+    }
+   }
+  },
+  "2017-18": {
+   "n_course_families": 15,
+   "districts_serving_high_school_grades": {
+    "n_districts": 10004,
+    "children": 51115851
+   },
+   "alg2_frame": {
+    "n_districts": 9795,
+    "children": 50418715
+   },
+   "alg2_frame_incomplete_total": {
+    "n_districts": 5,
+    "children": 1259967
+   },
+   "common_frame": {
+    "n_districts": 9790,
+    "children": 49158748
+   },
+   "neutral_frame": {
+    "n_districts": 9934,
+    "children": 49608753
+   },
+   "no_core_enrollment": {
+    "n_districts": 65,
+    "children": 247131,
+    "n_with_incomplete_total": 2
+   },
+   "no_alg2_other_core": {
+    "n_districts": 144,
+    "children": 450005,
+    "complete_totals": {
+     "n_districts": 144,
+     "children": 450005
+    }
+   }
+  },
+  "2021-22": {
+   "n_course_families": 15,
+   "districts_serving_high_school_grades": {
+    "n_districts": 9966,
+    "children": 52222749
+   },
+   "alg2_frame": {
+    "n_districts": 9735,
+    "children": 51739139
+   },
+   "alg2_frame_incomplete_total": {
+    "n_districts": 13,
+    "children": 80893
+   },
+   "common_frame": {
+    "n_districts": 9722,
+    "children": 51658246
+   },
+   "neutral_frame": {
+    "n_districts": 9910,
+    "children": 52063903
+   },
+   "no_core_enrollment": {
+    "n_districts": 42,
+    "children": 76188,
+    "n_with_incomplete_total": 2
+   },
+   "no_alg2_other_core": {
+    "n_districts": 189,
+    "children": 407422,
+    "complete_totals": {
+     "n_districts": 188,
+     "children": 405657
+    }
+   }
+  }
+ },
+ "stored_key_2015_16": {
+  "file": "CRDC/2015-16-crdc-data/Data Files and Layouts/CRDC 2015-16 School Data.csv",
+  "n_schools": 96360,
+  "n_distinct_stored_keys": 29374,
+  "n_schools_lost_under_stored_key": 66986,
+  "n_schools_numeric_district": 95835,
+  "alg2_enrollees_rebuilt_key": 2931194.0,
+  "alg2_enrollees_stored_key": 807667.0,
+  "pct_enrollment_lost": 72.44580194964918
+ }
+}

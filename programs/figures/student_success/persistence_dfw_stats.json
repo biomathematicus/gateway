@@ -1,0 +1,757 @@
+{
+ "cohort": 10027,
+ "cohort_not_observed_later": 2777,
+ "cap": {
+  "students": 1190,
+  "not_observed_later": 771,
+  "share": 0.6478991596638656
+ },
+ "population": {
+  "students": 8837,
+  "not_observed_later": 2006,
+  "share": 0.22700011316057486
+ },
+ "population_definition": "entrants of the reference cohort without the Coordinated Admission Program flag",
+ "outcome_definition": "no course record in a term one year or more after the entry term, within the window (a returning stop-out counts as observed)",
+ "intro_below": 2000,
+ "min_takers": 400,
+ "min_cell": 10,
+ "dfw_codes": [
+  "D",
+  "D+",
+  "D-",
+  "F",
+  "NC",
+  "W"
+ ],
+ "fail_codes": [
+  "D",
+  "D+",
+  "D-",
+  "F"
+ ],
+ "by_subject": {
+  "AHC": {
+   "entrants": 527,
+   "with_dfw": 112,
+   "left_with_dfw": 0.5089285714285714,
+   "left_without": 0.18313253012048192,
+   "diff": 0.3257960413080895,
+   "diff_lo": 0.22601287133981374,
+   "diff_hi": 0.4255792112763652,
+   "odds_ratio": 4.622727272727273,
+   "or_lo": 2.9587317780438664,
+   "or_hi": 7.222556500929197
+  },
+  "AIS": {
+   "entrants": 7995,
+   "with_dfw": 1046,
+   "left_with_dfw": 0.5086042065009561,
+   "left_without": 0.14663980428838683,
+   "diff": 0.3619644022125692,
+   "diff_lo": 0.3305472850641395,
+   "diff_hi": 0.3933815193609989,
+   "odds_ratio": 6.0232241115307215,
+   "or_lo": 5.2455298233342385,
+   "or_hi": 6.9162181742519815
+  },
+  "ART": {
+   "entrants": 797,
+   "with_dfw": 100,
+   "left_with_dfw": 0.49,
+   "left_without": 0.17073170731707318,
+   "diff": 0.3192682926829268,
+   "diff_lo": 0.2173853913023489,
+   "diff_hi": 0.42115119406350465,
+   "odds_ratio": 4.666666666666667,
+   "or_lo": 3.0087634491393698,
+   "or_hi": 7.238115639834406
+  },
+  "AST": {
+   "entrants": 402,
+   "with_dfw": 95,
+   "left_with_dfw": 0.3157894736842105,
+   "left_without": 0.08143322475570032,
+   "diff": 0.2343562489285102,
+   "diff_lo": 0.13600514075759004,
+   "diff_hi": 0.33270735709943033,
+   "odds_ratio": 5.206153846153846,
+   "or_lo": 2.8705462411528933,
+   "or_hi": 9.442118535229284
+  },
+  "BIO": {
+   "entrants": 2667,
+   "with_dfw": 760,
+   "left_with_dfw": 0.34078947368421053,
+   "left_without": 0.13581541688515994,
+   "diff": 0.2049740567990506,
+   "diff_lo": 0.1679342909797083,
+   "diff_hi": 0.24201382261839288,
+   "odds_ratio": 3.2894211576846306,
+   "or_lo": 2.6954294659488123,
+   "or_hi": 4.014310776562825
+  },
+  "CHE": {
+   "entrants": 3554,
+   "with_dfw": 890,
+   "left_with_dfw": 0.33146067415730335,
+   "left_without": 0.13626126126126126,
+   "diff": 0.1951994128960421,
+   "diff_lo": 0.16164095658832905,
+   "diff_hi": 0.22875786920375513,
+   "odds_ratio": 3.142787693589833,
+   "or_lo": 2.629991638226179,
+   "or_hi": 3.755568779542359
+  },
+  "CRJ": {
+   "entrants": 407,
+   "with_dfw": 76,
+   "left_with_dfw": 0.618421052631579,
+   "left_without": 0.11178247734138973,
+   "diff": 0.5066385752901893,
+   "diff_lo": 0.3922714506507047,
+   "diff_hi": 0.6210056999296739,
+   "odds_ratio": 12.877912395153775,
+   "or_lo": 7.243556515009738,
+   "or_hi": 22.894917339791377
+  },
+  "CS": {
+   "entrants": 600,
+   "with_dfw": 168,
+   "left_with_dfw": 0.24404761904761904,
+   "left_without": 0.09490740740740741,
+   "diff": 0.14914021164021163,
+   "diff_lo": 0.07855462630225293,
+   "diff_hi": 0.21972579697817032,
+   "odds_ratio": 3.078740157480315,
+   "or_lo": 1.910933996246261,
+   "or_hi": 4.960213683937416
+  },
+  "GEO": {
+   "entrants": 1094,
+   "with_dfw": 229,
+   "left_with_dfw": 0.4672489082969432,
+   "left_without": 0.1352601156069364,
+   "diff": 0.3319887926900068,
+   "diff_lo": 0.2634674167046634,
+   "diff_hi": 0.4005101686753502,
+   "odds_ratio": 5.607117836626032,
+   "or_lo": 4.0529648336472635,
+   "or_hi": 7.757227541872636
+  },
+  "HIS": {
+   "entrants": 4829,
+   "with_dfw": 1076,
+   "left_with_dfw": 0.43308550185873607,
+   "left_without": 0.15054622968292034,
+   "diff": 0.28253927217581576,
+   "diff_lo": 0.2507990279768446,
+   "diff_hi": 0.3142795163747869,
+   "odds_ratio": 4.3104830987958795,
+   "or_lo": 3.709511434817,
+   "or_hi": 5.008817164064503
+  },
+  "IS": {
+   "entrants": 1359,
+   "with_dfw": 146,
+   "left_with_dfw": 0.4657534246575342,
+   "left_without": 0.12778235779060182,
+   "diff": 0.3379710668669324,
+   "diff_lo": 0.2549051505651304,
+   "diff_hi": 0.4210369831687344,
+   "odds_ratio": 5.95070306038048,
+   "or_lo": 4.1257023267113535,
+   "or_hi": 8.582991236075927
+  },
+  "MAT": {
+   "entrants": 7782,
+   "with_dfw": 3164,
+   "left_with_dfw": 0.347661188369153,
+   "left_without": 0.14811606756171503,
+   "diff": 0.19954512080743797,
+   "diff_lo": 0.1800435099465405,
+   "diff_hi": 0.21904673166833544,
+   "odds_ratio": 3.0652171449295067,
+   "or_lo": 2.747854479756828,
+   "or_hi": 3.419233520110301
+  },
+  "PHY": {
+   "entrants": 554,
+   "with_dfw": 145,
+   "left_with_dfw": 0.2,
+   "left_without": 0.12224938875305623,
+   "diff": 0.07775061124694378,
+   "diff_lo": 0.005316578134519398,
+   "diff_hi": 0.15018464435936818,
+   "odds_ratio": 1.795,
+   "or_lo": 1.0853525752810382,
+   "or_hi": 2.968643621788705
+  },
+  "POL": {
+   "entrants": 5050,
+   "with_dfw": 1673,
+   "left_with_dfw": 0.34309623430962344,
+   "left_without": 0.13799230085875036,
+   "diff": 0.20510393345087308,
+   "diff_lo": 0.17955360200462267,
+   "diff_hi": 0.23065426489712348,
+   "odds_ratio": 3.262650009567808,
+   "or_lo": 2.834885772404438,
+   "or_hi": 3.754960848353424
+  },
+  "PSY": {
+   "entrants": 2585,
+   "with_dfw": 647,
+   "left_with_dfw": 0.4250386398763524,
+   "left_without": 0.15892672858617132,
+   "diff": 0.2661119112901811,
+   "diff_lo": 0.22468815623184324,
+   "diff_hi": 0.3075356663485189,
+   "odds_ratio": 3.9122503840245777,
+   "or_lo": 3.2101375131997036,
+   "or_hi": 4.7679275434043635
+  },
+  "SOC": {
+   "entrants": 2125,
+   "with_dfw": 395,
+   "left_with_dfw": 0.47848101265822784,
+   "left_without": 0.1630057803468208,
+   "diff": 0.31547523231140706,
+   "diff_lo": 0.2632281953605007,
+   "diff_hi": 0.36772226926231344,
+   "odds_ratio": 4.7110101218756455,
+   "or_lo": 3.7242036644098633,
+   "or_hi": 5.959291802568907
+  },
+  "SPN": {
+   "entrants": 627,
+   "with_dfw": 119,
+   "left_with_dfw": 0.40336134453781514,
+   "left_without": 0.13582677165354332,
+   "diff": 0.26753457288427185,
+   "diff_lo": 0.17449469010634364,
+   "diff_hi": 0.36057445566220003,
+   "odds_ratio": 4.301285976729945,
+   "or_lo": 2.7547155149698757,
+   "or_hi": 6.716142176233395
+  },
+  "STA": {
+   "entrants": 881,
+   "with_dfw": 134,
+   "left_with_dfw": 0.3208955223880597,
+   "left_without": 0.13386880856760375,
+   "diff": 0.18702671382045594,
+   "diff_lo": 0.10430093943762954,
+   "diff_hi": 0.26975248820328235,
+   "odds_ratio": 3.0572527472527473,
+   "or_lo": 2.0099502595760588,
+   "or_hi": 4.650261525653828
+  },
+  "WRC": {
+   "entrants": 6036,
+   "with_dfw": 1665,
+   "left_with_dfw": 0.43663663663663665,
+   "left_without": 0.15099519560741248,
+   "diff": 0.2856414410292242,
+   "diff_lo": 0.25956084689436437,
+   "diff_hi": 0.311722035164084,
+   "odds_ratio": 4.357913355301415,
+   "or_lo": 3.836563649065022,
+   "or_hi": 4.9501091470078125
+  }
+ },
+ "largest_difference": "CRJ",
+ "most_entrants_with_dfw": "MAT",
+ "any_subject": {
+  "entrants": 8823,
+  "with_dfw": 5267,
+  "left_with_dfw": 0.29485475602809946,
+  "left_without": 0.1265466816647919,
+  "diff": 0.16830807436330755,
+  "diff_lo": 0.15184454845627948,
+  "diff_hi": 0.18477160027033562,
+  "odds_ratio": 2.8861473104768742,
+  "or_lo": 2.571985534567176,
+  "or_hi": 3.2386831830197966
+ },
+ "focus": {
+  "subject": "MAT",
+  "entrants": 7782,
+  "by_outcome": {
+   "no_dfw": {
+    "students": 4618,
+    "not_observed_later": 684,
+    "share": 0.14811606756171503
+   },
+   "d_or_f": {
+    "students": 2413,
+    "not_observed_later": 784,
+    "share": 0.32490675507666805
+   },
+   "withdrawal_or_no_credit_only": {
+    "students": 751,
+    "not_observed_later": 316,
+    "share": 0.4207723035952064
+   }
+  },
+  "failed_against_no_dfw": {
+   "entrants": 7031,
+   "with_dfw": 2413,
+   "left_with_dfw": 0.32490675507666805,
+   "left_without": 0.14811606756171503,
+   "diff": 0.17679068751495303,
+   "diff_lo": 0.15547989431170608,
+   "diff_hi": 0.19810148071819997,
+   "odds_ratio": 2.7680455486988396,
+   "or_lo": 2.4607170085544805,
+   "or_hi": 3.11375754832225
+  },
+  "by_dfw_elsewhere": {
+   "dfw_here_and_elsewhere": {
+    "students": 2490,
+    "not_observed_later": 1004,
+    "share": 0.40321285140562246
+   },
+   "dfw_here_only": {
+    "students": 674,
+    "not_observed_later": 96,
+    "share": 0.142433234421365
+   },
+   "dfw_elsewhere_only": {
+    "students": 1631,
+    "not_observed_later": 305,
+    "share": 0.18700183936235437
+   },
+   "no_dfw_anywhere": {
+    "students": 2987,
+    "not_observed_later": 379,
+    "share": 0.1268831603615668
+   }
+  },
+  "among_no_dfw_elsewhere": {
+   "entrants": 3661,
+   "with_dfw": 674,
+   "left_with_dfw": 0.142433234421365,
+   "left_without": 0.1268831603615668,
+   "diff": 0.015550074059798191,
+   "diff_lo": -0.013409293767959338,
+   "diff_hi": 0.04450944188755572,
+   "odds_ratio": 1.1429093133450803,
+   "or_lo": 0.8977938041724245,
+   "or_hi": 1.4549462164477742
+  },
+  "among_dfw_elsewhere": {
+   "entrants": 4121,
+   "with_dfw": 2490,
+   "left_with_dfw": 0.40321285140562246,
+   "left_without": 0.18700183936235437,
+   "diff": 0.2162110120432681,
+   "diff_lo": 0.18920518813363638,
+   "diff_hi": 0.2432168359528998,
+   "odds_ratio": 2.937369547470379,
+   "or_lo": 2.533285488806811,
+   "or_hi": 3.4059090049381813
+  },
+  "with_dfw": 3164,
+  "with_dfw_no_record_after_that_term": 479,
+  "share_with_dfw_no_record_after_that_term": 0.1513906447534766
+ },
+ "scale": {
+  "not_observed_later": {
+   "students": 2006,
+   "with_first_year_attempt": 1784,
+   "with_first_year_dfw": 1100,
+   "share_with_dfw": 0.5483549351944168,
+   "share_with_dfw_among_takers": 0.6165919282511211
+  },
+  "observed_later": {
+   "students": 6831,
+   "with_first_year_attempt": 5998,
+   "with_first_year_dfw": 2064,
+   "share_with_dfw": 0.3021519543258674,
+   "share_with_dfw_among_takers": 0.34411470490163387
+  }
+ },
+ "outcomes": {
+  "all": {
+   "students": 8837,
+   "students_with_dfw": 5267,
+   "share_of_students_with_dfw": 0.5960167477650786,
+   "dfw_outcomes": 14145,
+   "first_attempts": 67838,
+   "by_subject": {
+    "MAT": {
+     "dfw_outcomes": 3298,
+     "first_attempts": 10138,
+     "share_of_dfw_outcomes": 0.23315659243548958
+    },
+    "POL": {
+     "dfw_outcomes": 1807,
+     "first_attempts": 6196,
+     "share_of_dfw_outcomes": 0.12774832096147049
+    },
+    "WRC": {
+     "dfw_outcomes": 1765,
+     "first_attempts": 9208,
+     "share_of_dfw_outcomes": 0.1247790738776953
+    },
+    "HIS": {
+     "dfw_outcomes": 1192,
+     "first_attempts": 6646,
+     "share_of_dfw_outcomes": 0.08427006009190527
+    },
+    "AIS": {
+     "dfw_outcomes": 1046,
+     "first_attempts": 7995,
+     "share_of_dfw_outcomes": 0.07394839165782963
+    },
+    "CHE": {
+     "dfw_outcomes": 924,
+     "first_attempts": 5757,
+     "share_of_dfw_outcomes": 0.06532343584305408
+    },
+    "other": {
+     "dfw_outcomes": 883,
+     "first_attempts": 5389,
+     "share_of_dfw_outcomes": 0.0624248851184164
+    },
+    "BIO": {
+     "dfw_outcomes": 801,
+     "first_attempts": 3503,
+     "share_of_dfw_outcomes": 0.05662778366914104
+    },
+    "PSY": {
+     "dfw_outcomes": 647,
+     "first_attempts": 2585,
+     "share_of_dfw_outcomes": 0.04574054436196536
+    },
+    "SOC": {
+     "dfw_outcomes": 398,
+     "first_attempts": 2201,
+     "share_of_dfw_outcomes": 0.02813715093672676
+    },
+    "GEO": {
+     "dfw_outcomes": 233,
+     "first_attempts": 1180,
+     "share_of_dfw_outcomes": 0.01647225167903853
+    },
+    "CS": {
+     "dfw_outcomes": 193,
+     "first_attempts": 820,
+     "share_of_dfw_outcomes": 0.013644397313538352
+    },
+    "PHY": {
+     "dfw_outcomes": 166,
+     "first_attempts": 1049,
+     "share_of_dfw_outcomes": 0.011735595616825734
+    },
+    "IS": {
+     "dfw_outcomes": 146,
+     "first_attempts": 1359,
+     "share_of_dfw_outcomes": 0.010321668434075644
+    },
+    "STA": {
+     "dfw_outcomes": 134,
+     "first_attempts": 883,
+     "share_of_dfw_outcomes": 0.009473312124425592
+    },
+    "SPN": {
+     "dfw_outcomes": 121,
+     "first_attempts": 695,
+     "share_of_dfw_outcomes": 0.008554259455638034
+    },
+    "AHC": {
+     "dfw_outcomes": 114,
+     "first_attempts": 554,
+     "share_of_dfw_outcomes": 0.008059384941675504
+    },
+    "ART": {
+     "dfw_outcomes": 104,
+     "first_attempts": 858,
+     "share_of_dfw_outcomes": 0.007352421350300459
+    },
+    "AST": {
+     "dfw_outcomes": 97,
+     "first_attempts": 415,
+     "share_of_dfw_outcomes": 0.0068575468363379286
+    },
+    "CRJ": {
+     "dfw_outcomes": 76,
+     "first_attempts": 407,
+     "share_of_dfw_outcomes": 0.005372923294450336
+    }
+   },
+   "students_with_dfw_in_focus": 3164,
+   "share_of_students_with_dfw_holding_one_in_focus": 0.6007214733244731
+  },
+  "not_observed_later": {
+   "students": 2006,
+   "students_with_dfw": 1553,
+   "share_of_students_with_dfw": 0.7741774675972084,
+   "dfw_outcomes": 5584,
+   "first_attempts": 13051,
+   "by_subject": {
+    "MAT": {
+     "dfw_outcomes": 1154,
+     "first_attempts": 2110,
+     "share_of_dfw_outcomes": 0.2066618911174785
+    },
+    "WRC": {
+     "dfw_outcomes": 774,
+     "first_attempts": 1892,
+     "share_of_dfw_outcomes": 0.13861031518624642
+    },
+    "POL": {
+     "dfw_outcomes": 640,
+     "first_attempts": 1245,
+     "share_of_dfw_outcomes": 0.11461318051575932
+    },
+    "AIS": {
+     "dfw_outcomes": 532,
+     "first_attempts": 1551,
+     "share_of_dfw_outcomes": 0.09527220630372493
+    },
+    "HIS": {
+     "dfw_outcomes": 524,
+     "first_attempts": 1359,
+     "share_of_dfw_outcomes": 0.09383954154727794
+    },
+    "other": {
+     "dfw_outcomes": 375,
+     "first_attempts": 916,
+     "share_of_dfw_outcomes": 0.06715616045845273
+    },
+    "CHE": {
+     "dfw_outcomes": 303,
+     "first_attempts": 864,
+     "share_of_dfw_outcomes": 0.0542621776504298
+    },
+    "BIO": {
+     "dfw_outcomes": 280,
+     "first_attempts": 630,
+     "share_of_dfw_outcomes": 0.050143266475644696
+    },
+    "PSY": {
+     "dfw_outcomes": 275,
+     "first_attempts": 583,
+     "share_of_dfw_outcomes": 0.04924785100286533
+    },
+    "SOC": {
+     "dfw_outcomes": 190,
+     "first_attempts": 475,
+     "share_of_dfw_outcomes": 0.03402578796561605
+    },
+    "GEO": {
+     "dfw_outcomes": 109,
+     "first_attempts": 238,
+     "share_of_dfw_outcomes": 0.019520057306590257
+    },
+    "IS": {
+     "dfw_outcomes": 68,
+     "first_attempts": 223,
+     "share_of_dfw_outcomes": 0.012177650429799427
+    },
+    "AHC": {
+     "dfw_outcomes": 58,
+     "first_attempts": 137,
+     "share_of_dfw_outcomes": 0.010386819484240688
+    },
+    "ART": {
+     "dfw_outcomes": 52,
+     "first_attempts": 179,
+     "share_of_dfw_outcomes": 0.009312320916905445
+    },
+    "SPN": {
+     "dfw_outcomes": 48,
+     "first_attempts": 126,
+     "share_of_dfw_outcomes": 0.008595988538681949
+    },
+    "CRJ": {
+     "dfw_outcomes": 47,
+     "first_attempts": 84,
+     "share_of_dfw_outcomes": 0.008416905444126075
+    },
+    "CS": {
+     "dfw_outcomes": 47,
+     "first_attempts": 102,
+     "share_of_dfw_outcomes": 0.008416905444126075
+    },
+    "STA": {
+     "dfw_outcomes": 43,
+     "first_attempts": 143,
+     "share_of_dfw_outcomes": 0.007700573065902579
+    },
+    "PHY": {
+     "dfw_outcomes": 34,
+     "first_attempts": 137,
+     "share_of_dfw_outcomes": 0.0060888252148997134
+    },
+    "AST": {
+     "dfw_outcomes": 31,
+     "first_attempts": 57,
+     "share_of_dfw_outcomes": 0.005551575931232092
+    }
+   },
+   "students_with_dfw_in_focus": 1100,
+   "share_of_students_with_dfw_holding_one_in_focus": 0.7083065035415326
+  },
+  "observed_later": {
+   "students": 6831,
+   "students_with_dfw": 3714,
+   "share_of_students_with_dfw": 0.5436978480456741,
+   "dfw_outcomes": 8561,
+   "first_attempts": 54787,
+   "by_subject": {
+    "MAT": {
+     "dfw_outcomes": 2144,
+     "first_attempts": 8028,
+     "share_of_dfw_outcomes": 0.2504380329400771
+    },
+    "POL": {
+     "dfw_outcomes": 1167,
+     "first_attempts": 4951,
+     "share_of_dfw_outcomes": 0.13631585095199159
+    },
+    "WRC": {
+     "dfw_outcomes": 991,
+     "first_attempts": 7316,
+     "share_of_dfw_outcomes": 0.11575750496437331
+    },
+    "HIS": {
+     "dfw_outcomes": 668,
+     "first_attempts": 5287,
+     "share_of_dfw_outcomes": 0.07802826772573297
+    },
+    "CHE": {
+     "dfw_outcomes": 621,
+     "first_attempts": 4893,
+     "share_of_dfw_outcomes": 0.07253825487676674
+    },
+    "BIO": {
+     "dfw_outcomes": 521,
+     "first_attempts": 2873,
+     "share_of_dfw_outcomes": 0.0608573764747109
+    },
+    "AIS": {
+     "dfw_outcomes": 514,
+     "first_attempts": 6444,
+     "share_of_dfw_outcomes": 0.06003971498656699
+    },
+    "other": {
+     "dfw_outcomes": 508,
+     "first_attempts": 4473,
+     "share_of_dfw_outcomes": 0.05933886228244364
+    },
+    "PSY": {
+     "dfw_outcomes": 372,
+     "first_attempts": 2002,
+     "share_of_dfw_outcomes": 0.0434528676556477
+    },
+    "SOC": {
+     "dfw_outcomes": 208,
+     "first_attempts": 1726,
+     "share_of_dfw_outcomes": 0.024296227076276135
+    },
+    "CS": {
+     "dfw_outcomes": 146,
+     "first_attempts": 718,
+     "share_of_dfw_outcomes": 0.01705408246700152
+    },
+    "PHY": {
+     "dfw_outcomes": 132,
+     "first_attempts": 912,
+     "share_of_dfw_outcomes": 0.015418759490713701
+    },
+    "GEO": {
+     "dfw_outcomes": 124,
+     "first_attempts": 942,
+     "share_of_dfw_outcomes": 0.014484289218549235
+    },
+    "STA": {
+     "dfw_outcomes": 91,
+     "first_attempts": 740,
+     "share_of_dfw_outcomes": 0.01062959934587081
+    },
+    "IS": {
+     "dfw_outcomes": 78,
+     "first_attempts": 1136,
+     "share_of_dfw_outcomes": 0.009111085153603551
+    },
+    "SPN": {
+     "dfw_outcomes": 73,
+     "first_attempts": 569,
+     "share_of_dfw_outcomes": 0.00852704123350076
+    },
+    "AST": {
+     "dfw_outcomes": 66,
+     "first_attempts": 358,
+     "share_of_dfw_outcomes": 0.007709379745356851
+    },
+    "AHC": {
+     "dfw_outcomes": 56,
+     "first_attempts": 417,
+     "share_of_dfw_outcomes": 0.006541291905151268
+    },
+    "ART": {
+     "dfw_outcomes": 52,
+     "first_attempts": 679,
+     "share_of_dfw_outcomes": 0.006074056769069034
+    },
+    "CRJ": {
+     "dfw_outcomes": 29,
+     "first_attempts": 323,
+     "share_of_dfw_outcomes": 0.003387454736596192
+    }
+   },
+   "students_with_dfw_in_focus": 2064,
+   "share_of_students_with_dfw_holding_one_in_focus": 0.555735056542811
+  },
+  "every_course_level": {
+   "dfw_outcomes": 16555,
+   "share_in_focus": 0.1996979764421625
+  },
+  "with_repeated_attempts": {
+   "dfw_outcomes": 15403,
+   "share_in_focus": 0.254236187755632
+  }
+ },
+ "by_number_of_dfw_outcomes": {
+  "0": {
+   "students": 3570,
+   "not_observed_later": 453,
+   "share": 0.126890756302521
+  },
+  "1": {
+   "students": 1736,
+   "not_observed_later": 254,
+   "share": 0.14631336405529954
+  },
+  "2": {
+   "students": 1099,
+   "not_observed_later": 213,
+   "share": 0.19381255686988172
+  },
+  "3": {
+   "students": 890,
+   "not_observed_later": 275,
+   "share": 0.3089887640449438
+  },
+  "4_or_more": {
+   "students": 1542,
+   "not_observed_later": 811,
+   "share": 0.5259403372243839
+  }
+ },
+ "focus_subject_whole_cohort": {
+  "entrants": 8892,
+  "with_dfw": 3384,
+  "left_with_dfw": 0.35106382978723405,
+  "left_without": 0.238562091503268,
+  "diff": 0.11250173828396606,
+  "diff_lo": 0.09287257877270708,
+  "diff_hi": 0.13213089779522505,
+  "odds_ratio": 1.7267011003817652,
+  "or_lo": 1.5719010388529422,
+  "or_hi": 1.8967457978367872
+ }
+}

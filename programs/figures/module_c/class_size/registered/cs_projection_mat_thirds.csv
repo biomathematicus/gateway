@@ -1,0 +1,7 @@
+outcome,entry_math_score,affected_first_attempts,change_among_affected,cluster_t_lo,cluster_t_hi
+grade,lowest third,6388,0.1207,0.0089,0.2325
+grade,middle third,6242,0.0611,-0.0268,0.1491
+grade,highest third,4889,-0.0054,-0.0938,0.0829
+dfw,lowest third,5904,-4.6342,-8.2240,-1.0445
+dfw,middle third,7044,-1.5714,-4.2224,1.0795
+dfw,highest third,5553,1.9714,-0.8701,4.8129

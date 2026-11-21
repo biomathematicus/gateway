@@ -1,0 +1,12 @@
+{
+ "n_students": 19489,
+ "n_majors": 49,
+ "n_merged": 14,
+ "min_flow": 10,
+ "n_sectors": 36,
+ "n_drawn_flows": 415,
+ "n_drawn_students": 17164,
+ "min_drawn_flow": 10,
+ "n_withheld_flows": 610,
+ "n_withheld_students": 2325
+}
